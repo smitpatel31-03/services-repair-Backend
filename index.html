@@ -113,12 +113,12 @@
             <img src="https://html.awaikenthemes.com/repairit/images/about-img-1.jpg" alt="" id="h-aboutus-photo-1">
           </div>
           <div class="h-aboutus-photos-row1-exprience-card-div">
-            <div class="h-aboutus-photos-row1-exprience-card-1" class="h-aboutus-photos-row1-exprience-card">
-              <p>25+</p>
-              <p>Years of exprience</p>
+            <div class="h-aboutus-photos-row1-exprience-card-1">
+              <p id="h-aboutus-photos-row1-exprience-card1-content-1">25+</p>
+              <p id="h-aboutus-photos-row1-exprience-card1-content-2">Years of exprience</p>
             </div>
-            <div class="h-aboutus-photos-row1-exprience-card-2" class="h-aboutus-photos-row1-exprience-card">
-              <p>24/7 repair support</p>
+            <div class="h-aboutus-photos-row1-exprience-card-2">
+              <p id="h-aboutus-photos-row1-exprience-card2-content-1">24/7 repair support</p>
             </div>
           </div>
         </div>
@@ -133,13 +133,13 @@
           skilled technicians ensure your tech is in safe hands, bringing your devices back to life with precision and
           care.</p>
         <div class="h-aboutus-description-taglines1-card-div">
-          <div class="h-aboutus-description-tagline1-card" id="h-aboutus-description-tagline1-card-1">
+          <div class="h-aboutus-description-tagline1-card">
             <img src="" alt="">
-            <p>fast and reliable service</p>
+            <p  id="h-aboutus-description-tagline1-card-1">fast and reliable service</p>
           </div>
-          <div class="h-aboutus-description-tagline1-card" id="h-aboutus-description-tagline1-card-2">
+          <div class="h-aboutus-description-tagline1-card">
             <img src="" alt="">
-            <p>fast and reliable service</p>
+            <p id="h-aboutus-description-tagline1-card-2">fast and reliable service</p>
           </div>
         </div>
         <div class="h-aboutus-description-taglines2-div">
@@ -167,17 +167,17 @@
       <div class="h-services-cards-div">
         <a href="services1.html">
           <div class="h-services-card" id="h-services-card-1">
-            <p>Computer Hardware & Mobile Repair</p>
+            <p class="service1-name">Computer Hardware & Mobile Repair</p>
           </div>
         </a>
         <a href="services2.html">
           <div class="h-services-card" id="h-services-card-2">
-            <p>Computer Hardware & Mobile Repair</p>
+            <p class="service2-name">Computer Hardware & Mobile Repair</p>
           </div>
         </a>
         <a href="services3.html">
           <div class="h-services-card" id="h-services-card-3">
-            <p>Computer Hardware & Mobile Repair</p>
+            <p class="service3-name">Computer Hardware & Mobile Repair</p>
           </div>
         </a>
       </div>
@@ -210,7 +210,7 @@
         </div>
         <div id="h-Services-2-image-div-1" class="h-Services-2-image-div">
           <img src="https://html.awaikenthemes.com/repairit/images/project-1.jpg" alt="" class="h-services-2-image"
-            id="g-services-2-image-1">
+            id="h-services-2-image-1">
         </div>
       </div>
 
@@ -240,7 +240,7 @@
         </div>
         <div id="h-Services-2-image-div-2" class="h-Services-2-image-div">
           <img src="https://html.awaikenthemes.com/repairit/images/project-5.jpg" alt="" class="h-services-2-image"
-            id="g-services-2-image-2">
+            id="h-services-2-image-2">
         </div>
       </div>
     </section>
@@ -347,7 +347,7 @@
           <span class="dot"></span>
           <p>CONTACT US</p>
         </div>
-        <h3>Please Visit Our Office</h3>
+        <h3 id="h-contact-us-heading">Please Visit Our Office</h3>
       </div>
 
       <div class="contactus-contact-details">
@@ -383,9 +383,7 @@
           <p>TESTIMONIAL</p>
           <h2 id="testimonial-heading">Here From Our Statisfied Customer</h2>
         </div>
-        <div class="testimonial-buttton-div">
-          <button id="testimonial-button"></button>
-        </div>
+
       </div>
       <div class="testimonial-wrapper">
         <div class="tetimonial-cards-div">
@@ -503,8 +501,6 @@
       </div>
 
     </section>
-
-
   </main>
 
   <footer class="footer">
@@ -524,7 +520,7 @@
         </div>
         <div class="footer-address-desription-div">
           <h4 class="footer-address-card">Address</h4>
-          <p><a href="" class="address">6985 SW1A 1AA United Kingdom</a></p>
+          <p><a href="" class="address c-address">6985 SW1A 1AA United Kingdom</a></p>
         </div>
       </div>
       <div class="fooer-social-links-heading-div">
@@ -658,18 +654,153 @@
       </div>
     </section>
     <section class="footer-section-3">
-      <h5 class="footer-copyright-heading">Copyright © 2025 All Rights Reserved.</h5>
+      <h5 class="footer-copyright-heading">Copyright © <a href="" class="year">2025</a>All Rights Reserved.</h5>
     </section>
   </footer>
 
     <script>
-      fetch('https://script.google.com/macros/s/AKfycbwI3XCwdSQ46bq6jOoB6g4shsQStOkLbg9B0jE1-LPg4McRHVfj2Od8nsp9sHlCVJot6A/exec')
+      fetch('https://script.google.com/macros/s/AKfycbw2ccaASiheu8WAOFpDZz05WNZhxvcdTO8MZBtdo7VvVTJupclgo33deEeFJoA1Vjbu/exec')
       .then(res => res.json())
       .then(data => {
         console.log("data :",data);
         
-        document.getElementById("h-first-banner-first-line").innerHTML = data["h-first-banner-first-line"]
-        document.getElementById("h-first-banner-second-line").innerHTML = data["h-first-banner-second-line"]
+        let year = new Date()
+        const curruntYear = year.getFullYear()
+
+        document.querySelectorAll(".logo").forEach(el => el.src = data["logo"])
+        document.querySelector(".header-button-link").textContent = data["header-button-link"]
+
+        document.getElementById("footer-logo-description").textContent = data["footer-logo-description"]
+        document.querySelector(".c-address").textContent = data["address"]
+      
+        if(data["linkedin"] && data["linkedin"].trim() !== ""){
+          document.querySelector(".linkedin").style.display = "inline-flex"
+        }
+        if(data["X"] && data["X"].trim() !== ""){
+          document.querySelector(".X").style.display = "inline-flex"
+        }
+        if(data["youtube"] && data["youtube"].trim() !== ""){
+          document.querySelector(".youtube").style.display = "inline-flex"
+        }
+
+        document.querySelector(".footer-subscriber-heading").textContent = data["footer-subscriber-heading"]
+        document.querySelector(".footer-subscriber-description").textContent = data["footer-subscriber-description"]
+
+        document.querySelector(".year").textContent = curruntYear
+        
+
+        document.querySelector(".h-banner-1").style.backgroundImage = `url('${data["h-banner-background-image-1"]}')`;
+        document.querySelector(".h-banner-2").style.backgroundImage = `url('${data["h-banner-background-image-2"]}')`;
+      
+        document.getElementById("h-first-banner-first-line").textContent = data["h-first-banner-first-line"]
+        document.getElementById("h-second-banner-first-line").textContent = data["h-second-banner-first-line"]
+        document.getElementById("h-first-banner-heading").textContent = data["h-first-banner-heading"] 
+        document.getElementById("h-second-banner-heading").textContent = data["h-second-banner-heading"] 
+        document.getElementById('h-first-banner-second-line').textContent = data["h-first-banner-second-line"]
+        document.getElementById('h-second-banner-second-line').textContent = data["h-second-banner-second-line"]
+        document.getElementById("h-first-banner-button-1").textContent = data["h-first-banner-button-1"]
+        document.getElementById("h-second-banner-button-1").textContent = data["h-second-banner-button-1"]
+        document.getElementById("h-first-banner-top-review").textContent = data["h-first-banner-top-review"]
+        document.getElementById("h-second-banner-top-review").textContent = data["h-second-banner-top-review"]
+        document.getElementById("h-first-banner-review-content").textContent = data["h-first-banner-review-content"]
+        document.getElementById("h-second-banner-review-content").textContent = data["h-second-banner-review-content"]
+
+        document.getElementById("h-aboutus-photo-1").src = data["h-aboutus-photo-1"]
+        document.getElementById("h-aboutus-photo-2").src = data["h-aboutus-photo-2"]
+        document.getElementById("h-aboutus-photos-row1-exprience-card1-content-1").textContent = data["h-aboutus-photos-row1-exprience-card1-content-1"]
+        document.getElementById("h-aboutus-photos-row1-exprience-card1-content-2").textContent = data["h-aboutus-photos-row1-exprience-card1-content-2"]
+        document.getElementById("h-aboutus-photos-row1-exprience-card2-content-1").textContent = data["h-aboutus-photos-row1-exprience-card2-content-1"]
+        document.getElementById("h-about-us-heading"),textContent = data["h-about-us-heading"]
+        document.getElementById("h-about-us-discription"),textContent = data["h-about-us-discription"]
+        document.getElementById("h-aboutus-description-tagline1-card-1").textContent = data["h-aboutus-description-tagline1-card-1"]
+        document.getElementById("h-aboutus-description-tagline1-card-2").textContent = data["h-aboutus-description-tagline1-card-2"]
+        document.getElementById("h-aboutus-description-tagline2-1").textContent = data["h-aboutus-description-tagline2-1"]
+        document.getElementById("h-aboutus-description-tagline2-2").textContent = data["h-aboutus-description-tagline2-2"]
+        document.getElementById("h-aboutus-button").textContent = data["h-aboutus-button"]
+
+        document.getElementById("h-services-heading").textContent = data["h-services-heading"]
+        document.getElementById("h-services-button").textContent = data["h-services-button"]
+        document.getElementById("h-services-card-1").style.backgroundImage = `url('${data["services-image-1"]}')`
+        document.querySelectorAll(".service1-name").forEach(el => el.textContent = data["service-name-1"])
+        document.getElementById("h-services-card-2").style.backgroundImage = `url('${data["services-image-2"]}')`
+        document.querySelectorAll(".service2-name").forEach(el => el.textContent = data["service-name-2"])
+        document.getElementById("h-services-card-3").style.backgroundImage = `url('${data["services-image-3"]}')`
+        document.querySelectorAll(".service3-name").forEach(el => el.textContent = data["service-name-3"])
+        document.querySelectorAll(".service4-name").forEach(el => el.textContent = data["service-name-4"])
+        document.querySelectorAll(".service5-name").forEach(el => el.textContent = data["service-name-5"])
+        document.querySelectorAll(".service6-name").forEach(el => el.textContent = data["service-name-6"])
+        document.getElementById("h-services-2-description-main-tagline-1").textContent = data["h-services-2-description-main-tagline-1"]
+        document.getElementById("h-services-2-description-heading-1").textContent = data["h-services-2-description-heading-1"]
+        document.getElementById("h-services-2-description-paragraph-1").textContent = data["h-services-2-description-paragraph-1"]
+        document.getElementById("h-services-2-list-1-1").textContent = data["h-services-2-list-1-1"]
+        document.getElementById("h-services-2-list-1-2").textContent = data["h-services-2-list-1-2"]
+        document.getElementById("h-services-2-list-1-3").textContent = data["h-services-2-list-1-3"]
+        document.getElementById("h-services-2-list-1-4").textContent = data["h-services-2-list-1-4"]
+        document.getElementById("h-services-2-button-1").textContent = data["h-services-2-button-1"]
+        document.getElementById("h-services-2-image-1").src = data["h-services-2-image-1"]
+        document.getElementById("h-services-2-description-main-tagline-2").textContent = data["h-services-2-description-main-tagline-2"]
+        document.getElementById("h-services-2-description-heading-2").textContent = data["h-services-2-description-heading-2"]
+        document.getElementById("h-services-2-description-paragraph-2").textContent = data["h-services-2-description-paragraph-2"]
+        document.getElementById("h-services-2-list-2-1").textContent = data["h-services-2-list-2-1"]
+        document.getElementById("h-services-2-list-2-2").textContent = data["h-services-2-list-2-2"]
+        document.getElementById("h-services-2-list-2-3").textContent = data["h-services-2-list-2-3"]
+        document.getElementById("h-services-2-list-2-4").textContent = data["h-services-2-list-2-4"]
+        document.getElementById("h-services-2-button-2").textContent = data["h-services-2-button-2"]
+        document.getElementById("h-services-2-image-2").src = data["h-services-2-image-2"]
+
+        document.getElementById("h-why-choose-us-heading").textContent = data["h-why-choose-us-heading"]
+        document.getElementById("h-why-choose-us-button").textContent = data["h-why-choose-us-button"]
+        document.getElementById("h-why-choose-us-tagline-1").textContent = data["h-why-choose-us-tagline-1"]
+        document.getElementById("h-why-choose-us-tagline-2").textContent = data["h-why-choose-us-tagline-2"]
+        document.getElementById("h-why-choose-us-tagline-3").textContent = data["h-why-choose-us-tagline-3"]
+        document.getElementById("h-why-choose-us-tagline-4").textContent = data["h-why-choose-us-tagline-4"]
+        document.getElementById("h-why-choose-us-image").src = data["h-why-choose-us-image"]
+        document.getElementById("h-why-choose-us-discription-1").textContent = data["h-why-choose-us-discription-1"]
+        document.getElementById("h-why-choose-us-discription-2").textContent = data["h-why-choose-us-discription-2"]
+        document.getElementById("h-why-choose-us-description-card-heading-1").textContent = data["h-why-choose-us-description-card-heading-1"]
+        document.getElementById("h-why-choose-us-description-card-content-1").textContent = data["h-why-choose-us-description-card-content-1"]
+        document.getElementById("h-why-choose-us-description-card-heading-2").textContent = data["h-why-choose-us-description-card-heading-2"]
+        document.getElementById("h-why-choose-us-description-card-content-2").textContent = data["h-why-choose-us-description-card-content-2"]
+        document.getElementById("h-why-choose-us-description-card-heading-3").textContent = data["h-why-choose-us-description-card-heading-3"]
+        document.getElementById("h-why-choose-us-description-card-content-3").textContent = data["h-why-choose-us-description-card-content-3"]
+        document.getElementById("h-why-choose-us-description-card-heading-4").textContent = data["h-why-choose-us-description-card-heading-4"]
+        document.getElementById("h-why-choose-us-description-card-content-4").textContent = data["h-why-choose-us-description-card-content-4"]
+
+        document.getElementById("h-contact-us-heading").textContent = data["h-contact-us-heading"]
+        document.querySelectorAll(".mobile-number").forEach(el => {
+          el.href = `tel:+91${data["mobile-number"]}`
+          el.textContent = `+91 ${data["mobile-number"]}`
+        })
+        document.querySelectorAll(".email").forEach(el => {
+          el.href = `mailto:${data["email"]}`
+          el.textContent = data["email"]
+        })
+        document.querySelectorAll(".address").forEach(el => {
+          el.href = data["address-link"]
+        })
+
+        document.getElementById("testimonial-heading").textContent = data["testimonial-heading"]
+        document.getElementById("testimonial-image-1").src = data["testimonial-image-1"]
+        document.getElementById("testimonial-client-name-1").textContent = data["testimonial-client-name-1"]
+        document.getElementById("testimonial-client-position-1").textContent = data["testimonial-client-position-1"]
+        document.getElementById("testimonial-client-review-1").textContent =  data["testimonial-client-review-1"]
+        document.getElementById("testimoial-review-description-1").textContent =  data["testimoial-review-description-1"]
+        document.getElementById("testimonial-image-2").src = data["testimonial-image-2"]
+        document.getElementById("testimonial-client-name-2").textContent = data["testimonial-client-name-2"]
+        document.getElementById("testimonial-client-position-2").textContent = data["testimonial-client-position-2"]
+        document.getElementById("testimonial-client-review-2").textContent =  data["testimonial-client-review-2"]
+        document.getElementById("testimoial-review-description-2").textContent =  data["testimoial-review-description-2"]
+        document.getElementById("testimonial-image-3").src = data["testimonial-image-3"]
+        document.getElementById("testimonial-client-name-3").textContent = data["testimonial-client-name-3"]
+        document.getElementById("testimonial-client-position-3").textContent = data["testimonial-client-position-3"]
+        document.getElementById("testimonial-client-review-3").textContent =  data["testimonial-client-review-3"]
+        document.getElementById("testimoial-review-description-3").textContent =  data["testimoial-review-description-3"]
+        document.getElementById("testimonial-image-4").src = data["testimonial-image-3"]
+        document.getElementById("testimonial-client-name-4").textContent = data["testimonial-client-name-4"]
+        document.getElementById("testimonial-client-position-4").textContent = data["testimonial-client-position-4"]
+        document.getElementById("testimonial-client-review-4").textContent =  data["testimonial-client-review-4"]
+        document.getElementById("testimoial-review-description-4").textContent =  data["testimoial-review-description-4"]
+
       })
     </script>
 
@@ -818,7 +949,7 @@
     }
 
     function updateDots() {
-      dotsContainer.innerHTML = '';
+      dotsContainer.textContent = '';
       for (let i = 0; i < total; i++) {
         const dot = document.createElement('span');
         dot.classList.add('dot');

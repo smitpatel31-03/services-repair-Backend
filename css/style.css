@@ -648,13 +648,21 @@ img {
   align-items: stretch;
 }
 
-.h-aboutus-photos-row1-photo img,
+#h-aboutus-photo-1,
 #h-aboutus-photo-2 {
   border-radius: 20px;
-  width: 100%;
-  height: auto;
   object-fit: cover;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+#h-aboutus-photo-1{
+  width: 350px;
+  height: 350px;
+}
+
+#h-aboutus-photo-2{
+  width: 600px;
+  height: 300px;
 }
 
 .h-aboutus-photos-row1-exprience-card-div {
@@ -832,8 +840,7 @@ img {
   background-position: center;
   border-radius: 20px;
   overflow: hidden;
-  width: 100%;
-  max-width: 320px;
+  width: 300px;
   min-height: 420px;
   display: flex;
   align-items: flex-end;
@@ -1884,6 +1891,10 @@ backdrop-filter: blur(4px);
 
 .a-faq-rating-class{
   color: var(--accent-color-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 
 #a-faq-rating,
@@ -2178,6 +2189,11 @@ backdrop-filter: blur(6px);
 
 #c-map{
   width: 100vw;
+}
+
+#c-map iframe{
+  width: 100vw;
+  height: 400px;
 }
 
 .services-faq-rating{
@@ -2679,4 +2695,10 @@ backdrop-filter: blur(6px);
 #s-what-we-do-image {
   max-width: 100%;
   border-radius: 20px;
+}
+
+.linkedin,
+.youtube,
+.X{
+  display: none;
 }

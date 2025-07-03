@@ -122,11 +122,11 @@
         </div>
       </div>
     </section>
-    <section class="c-map-section">
+    <section class="c-map-section" id="c-map">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.4462126149447!2d73.12746557506931!3d22.298958179687595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc974e5d47ae3%3A0x58379e994d22cb3b!2sShriii%20Tracking%20Solution!5e0!3m2!1sen!2sin!4v1750913354749!5m2!1sen!2sin"
         width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade" id="c-map"></iframe>
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 
 
@@ -135,8 +135,7 @@
   <footer class="footer">
     <section class="footer-section-1">
       <div class="footer-logo-div">
-        <img src="public/images/image.webp" alt=""
-          class="logo">
+        <img src="public/images/image.webp" alt="" class="logo">
         <p id="footer-logo-description">Your trusted partner for expert device repairs. We provide fast, affordable
           repair services.</p>
       </div>
@@ -150,7 +149,7 @@
         </div>
         <div class="footer-address-desription-div">
           <h4 class="footer-address-card">Address</h4>
-          <p><a href="" class="address">6985 SW1A 1AA United Kingdom</a></p>
+          <p><a href="" class="address c-address">6985 SW1A 1AA United Kingdom</a></p>
         </div>
       </div>
       <div class="fooer-social-links-heading-div">
@@ -275,7 +274,7 @@
       </div>
       <div class="footer-subcriber-div">
         <h4 class="footer-subscriber-heading">Subscribe Our Newsletter</h4>
-        <form action="" class="footer-subscriber-form" id="contact-us-form">
+        <form action="" class="footer-subscriber-form">
           <input type="email" name="email" placeholder="Your Email" class="footer-subscriber-email-input">
           <input type="submit" value="Subscribe" class="footer-subcriber-subscribe-button">
         </form>
@@ -284,34 +283,87 @@
       </div>
     </section>
     <section class="footer-section-3">
-      <h5 class="footer-copyright-heading">Copyright © 2025 All Rights Reserved.</h5>
+      <h5 class="footer-copyright-heading">Copyright © <a href="" class="year">2025</a>All Rights Reserved.</h5>
     </section>
   </footer>
 
-<script>
-  const hamburger = document.getElementById("hamburger");
-  const navMenu = document.getElementById("navMenu");
-  const overlay = document.getElementById("overlay");
-  const closeBtn = document.getElementById("closeNavBtn");
+  <script>
+    fetch("https://script.google.com/macros/s/AKfycbw2ccaASiheu8WAOFpDZz05WNZhxvcdTO8MZBtdo7VvVTJupclgo33deEeFJoA1Vjbu/exec")
+      .then(res => res.json())
+      .then(data => {
+        console.log("data: ", data);
 
-  function openMobileNav() {
-    if (window.innerWidth <= 860) {
-      navMenu.classList.add("active");
-      overlay.classList.add("show");
-      overlay.classList.remove("hidden");
+        let year = new Date()
+        const curruntYear = year.getFullYear()
+
+        document.querySelectorAll(".logo").forEach(el => el.src = data["logo"])
+        document.querySelector(".header-button-link").textContent = data["header-button-link"]
+
+        document.getElementById("footer-logo-description").textContent = data["footer-logo-description"]
+        document.querySelector(".c-address").textContent = data["address"]
+      
+        if(data["linkedin"] && data["linkedin"].trim() !== ""){
+          document.querySelector(".linkedin").style.display = "inline-flex"
+        }
+        if(data["X"] && data["X"].trim() !== ""){
+          document.querySelector(".X").style.display = "inline-flex"
+        }
+        if(data["youtube"] && data["youtube"].trim() !== ""){
+          document.querySelector(".youtube").style.display = "inline-flex"
+        }
+
+        document.querySelector(".footer-subscriber-heading").textContent = data["footer-subscriber-heading"]
+        document.querySelector(".footer-subscriber-description").textContent = data["footer-subscriber-description"]
+
+        document.querySelector(".year").textContent = curruntYear
+                document.querySelectorAll(".service1-name").forEach(el => el.textContent = data["service-name-1"])
+        document.querySelectorAll(".service2-name").forEach(el => el.textContent = data["service-name-2"])
+        document.querySelectorAll(".service3-name").forEach(el => el.textContent = data["service-name-3"])
+                document.querySelectorAll(".service4-name").forEach(el => el.textContent = data["service-name-4"])
+        document.querySelectorAll(".service5-name").forEach(el => el.textContent = data["service-name-5"])
+        document.querySelectorAll(".service6-name").forEach(el => el.textContent = data["service-name-6"])
+        document.getElementById("c-heading").textContent = data["c-heading"]
+        document.getElementById("c-description").textContent = data["c-description"]
+        document.querySelectorAll(".mobile-number").forEach(el => {
+          el.href = `tel:+91${data["mobile-number"]}`
+          el.textContent = `+91 ${data["mobile-number"]}`
+        })
+        document.querySelectorAll(".email").forEach(el => {
+          el.href = `mailto:${data["email"]}`
+          el.textContent = data["email"]
+        })
+        document.querySelectorAll(".address").forEach(el => {
+          el.href = data["address-link"]
+        })
+        document.querySelector(".c-address").textContent = data["address"]
+        document.getElementById("c-map").innerHTML = `${data["c-map"]}`
+      })
+  </script>
+
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("navMenu");
+    const overlay = document.getElementById("overlay");
+    const closeBtn = document.getElementById("closeNavBtn");
+
+    function openMobileNav() {
+      if (window.innerWidth <= 860) {
+        navMenu.classList.add("active");
+        overlay.classList.add("show");
+        overlay.classList.remove("hidden");
+      }
     }
-  }
 
-  function closeMobileNav() {
-    navMenu.classList.remove("active");
-    overlay.classList.remove("show");
-    overlay.classList.add("hidden");
-  }
+    function closeMobileNav() {
+      navMenu.classList.remove("active");
+      overlay.classList.remove("show");
+      overlay.classList.add("hidden");
+    }
 
-  hamburger.addEventListener("click", openMobileNav);
-  closeBtn.addEventListener("click", closeMobileNav);
-  overlay.addEventListener("click", closeMobileNav);
-</script>
+    hamburger.addEventListener("click", openMobileNav);
+    closeBtn.addEventListener("click", closeMobileNav);
+    overlay.addEventListener("click", closeMobileNav);
+  </script>
 
 </body>
 

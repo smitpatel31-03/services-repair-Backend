@@ -57,8 +57,9 @@
 
   <main>
     <section class="s1-banner">
-      <h1 class="a-heading">About Us</h1>
-      <span><a href="index.html"> Home </a> / <a href="services.html">Services</a> / About US </span>
+      <h1 class="a-heading service1-name">About Us</h1>
+      <span><a href="index.html"> Home </a> / <a href="services.html">Services</a> / <a href="#" class="service1-name">
+          About US </a> </span>
     </section>
 
     <section class="services-types-mian-section">
@@ -67,20 +68,33 @@
           <div>
             <p class="services-navigation-card-heading">Discover Our Solution</p>
           </div>
-          <a href="services1.html" class="service-link" id="service1-name"><li class="services-list">service 1</li></a>
-          <a href="services2.html" class="service-link" id="service2-name"><li class="services-list">service 2</li></a>
-          <a href="services3.html" class="service-link" id="service3-name"><li class="services-list">service 3</li></a>
-          <a href="services4.html" class="service-link" id="service4-name"><li class="services-list">service 4</li></a>
-          <a href="services5.html" class="service-link" id="service5-name"><li class="services-list">service 5</li></a>
-          <a href="services6.html" class="service-link" id="service6-name"><li class="services-list">service 6</li></a>
+          <a href="services1.html" class="service-link">
+            <li class="services-list service1-name">service 1</li>
+          </a>
+          <a href="services2.html" class="service-link">
+            <li class="services-list service2-name">service 2</li>
+          </a>
+          <a href="services3.html" class="service-link">
+            <li class="services-list service3-name">service 3</li>
+          </a>
+          <a href="services4.html" class="service-link">
+            <li class="services-list service4-name">service 4</li>
+          </a>
+          <a href="services5.html" class="service-link">
+            <li class="services-list service5-name">service 5</li>
+          </a>
+          <a href="services6.html" class="service-link">
+            <li class="services-list service6-name">service 6</li>
+          </a>
         </div>
-        <div class="services-faq-card">
-          <div class="services-faq-card-section-1">
-            <div id="a-faq-rating" class="services-faq-rating">
-              4.9 ⭐
+        <div class="a-faq-card">
+          <div class="a-faq-card-section-1">
+            <div class="a-faq-rating-class">
+              <p id="a-faq-rating">4.9</p>
+              <p>⭐</p>
             </div>
-            <div class="services-faq-photos-description-div">
-              <div class="services-faq-photos-div">
+            <div class="a-faq-photos-description-div">
+              <div class="a-faq-photos-div">
                 <img src="https://html.awaikenthemes.com/repairit/images/author-1.jpg" alt="" class="a-faq-image-1">
                 <img src="https://html.awaikenthemes.com/repairit/images/author-2.jpg" alt="" class="a-faq-image-2">
                 <img src="https://html.awaikenthemes.com/repairit/images/author-3.jpg" alt="" class="a-faq-image-3">
@@ -95,7 +109,7 @@
                 d="M19.5 22a1.5 1.5 0 0 0 1.5-1.5V17a1.5 1.5 0 0 0-1.5-1.5c-1.17 0-2.32-.18-3.42-.55a1.51 1.51 0 0 0-1.52.37l-1.44 1.44a14.77 14.77 0 0 1-5.89-5.89l1.43-1.43c.41-.39.56-.97.38-1.53c-.36-1.09-.54-2.24-.54-3.41A1.5 1.5 0 0 0 7 3H3.5A1.5 1.5 0 0 0 2 4.5C2 14.15 9.85 22 19.5 22M3.5 4H7a.5.5 0 0 1 .5.5c0 1.28.2 2.53.59 3.72c.05.14.04.34-.12.5L6 10.68c1.65 3.23 4.07 5.65 7.31 7.32l1.95-1.97c.14-.14.33-.18.51-.13c1.2.4 2.45.6 3.73.6a.5.5 0 0 1 .5.5v3.5a.5.5 0 0 1-.5.5C10.4 21 3 13.6 3 4.5a.5.5 0 0 1 .5-.5" />
             </svg>
             <a href="tel:+9190909090" class="mobile-number">
-              <p>+91 90909009</p>
+              +91 90909009
             </a>
           </div>
         </div>
@@ -299,8 +313,7 @@
   <footer class="footer">
     <section class="footer-section-1">
       <div class="footer-logo-div">
-        <img src="public/images/image.webp" alt=""
-          class="logo">
+        <img src="public/images/image.webp" alt="" class="logo">
         <p id="footer-logo-description">Your trusted partner for expert device repairs. We provide fast, affordable
           repair services.</p>
       </div>
@@ -314,7 +327,7 @@
         </div>
         <div class="footer-address-desription-div">
           <h4 class="footer-address-card">Address</h4>
-          <p><a href="" class="address">6985 SW1A 1AA United Kingdom</a></p>
+          <p><a href="" class="address c-address">6985 SW1A 1AA United Kingdom</a></p>
         </div>
       </div>
       <div class="fooer-social-links-heading-div">
@@ -448,34 +461,116 @@
       </div>
     </section>
     <section class="footer-section-3">
-      <h5 class="footer-copyright-heading">Copyright © 2025 All Rights Reserved.</h5>
+      <h5 class="footer-copyright-heading">Copyright © <a href="" class="year">2025</a>All Rights Reserved.</h5>
     </section>
   </footer>
 
-<script>
-  const hamburger = document.getElementById("hamburger");
-  const navMenu = document.getElementById("navMenu");
-  const overlay = document.getElementById("overlay");
-  const closeBtn = document.getElementById("closeNavBtn");
+  <script>
+    fetch("https://script.google.com/macros/s/AKfycbw2ccaASiheu8WAOFpDZz05WNZhxvcdTO8MZBtdo7VvVTJupclgo33deEeFJoA1Vjbu/exec")
+      .then(res => res.json())
+      .then(data => {
 
-  function openMobileNav() {
-    if (window.innerWidth <= 860) {
-      navMenu.classList.add("active");
-      overlay.classList.add("show");
-      overlay.classList.remove("hidden");
+        
+        let servicesarr = [1, 2, 3, 4, 5, 6]
+        console.log("data: ", data);
+        let year = new Date()
+        const curruntYear = year.getFullYear()
+
+        document.querySelectorAll(".logo").forEach(el => el.src = data["logo"])
+        document.querySelector(".header-button-link").textContent = data["header-button-link"]
+
+        document.getElementById("footer-logo-description").textContent = data["footer-logo-description"]
+        document.querySelector(".c-address").textContent = data["address"]
+      
+        if(data["linkedin"] && data["linkedin"].trim() !== ""){
+          document.querySelector(".linkedin").style.display = "inline-flex"
+        }
+        if(data["X"] && data["X"].trim() !== ""){
+          document.querySelector(".X").style.display = "inline-flex"
+        }
+        if(data["youtube"] && data["youtube"].trim() !== ""){
+          document.querySelector(".youtube").style.display = "inline-flex"
+        }
+
+        document.querySelector(".footer-subscriber-heading").textContent = data["footer-subscriber-heading"]
+        document.querySelector(".footer-subscriber-description").textContent = data["footer-subscriber-description"]
+
+        document.querySelector(".year").textContent = curruntYear
+        document.querySelector(".services-navigation-card-heading").textContent = data["services-navigation-card-heading"]
+        servicesarr.forEach(i => document.querySelectorAll(`.service${i}-name`).forEach(el => el.textContent = data[`service-name-${i}`]))
+
+
+        document.getElementById("a-faq-rating").textContent = data["a-faq-rating"]
+        document.querySelector(".a-faq-image-1").textContent = data["testimonial-image-1"]
+        document.querySelector(".a-faq-image-2").textContent = data["testimonial-image-2"]
+        document.querySelector(".a-faq-image-3").textContent = data["testimonial-image-3"]
+        document.querySelector(".a-faq-image-4").textContent = data["testimonial-image-4"]
+        document.querySelectorAll(".mobile-number").forEach(el => {
+          el.href = `tel:+91${data["mobile-number"]}`
+          el.textContent = `+91 ${data["mobile-number"]}`
+        })
+
+        document.getElementById("services-section-1-image-1").src = data["services-image-1"]
+        document.getElementById("services-section-1-description-1").textContent = data["services-section-1-description-1"]
+
+        document.getElementById("services-section-2-heading-1").textContent = data["services-section-2-heading-1"]
+        document.getElementById("services-section-2-description-1").textContent = data["services-section-2-description-1"]
+        document.getElementById("services-section-2-list-heading-1-1").textContent = data["services-section-2-list-heading-1-1"]
+        document.getElementById("services-section-2-list-content-1-1").textContent = data["services-section-2-list-content-1-1"]
+        document.getElementById("services-section-2-list-heading-1-2").textContent = data["services-section-2-list-heading-1-2"]
+        document.getElementById("services-section-2-list-content-1-2").textContent = data["services-section-2-list-content-1-2"]
+        document.getElementById("services-section-2-list-heading-1-3").textContent = data["services-section-2-list-heading-1-3"]
+        document.getElementById("services-section-2-list-content-1-3").textContent = data["services-section-2-list-content-1-3"]
+        document.getElementById("services-section-2-image-1").src = data["services-section-2-image-1"]
+
+        document.getElementById("services-section-3-heading-1").textContent = data["services-section-3-heading-1"]
+        document.getElementById("services-section-3-description-1").textContent = data["services-section-3-description-1"]
+        document.getElementById("section-3-icon-heading-1-1").textContent = data["section-3-icon-heading-1-1"]
+        document.getElementById("section-3-icon-heading-1-2").textContent = data["section-3-icon-heading-1-2"]
+        document.getElementById("section-3-icon-heading-1-3").textContent = data["section-3-icon-heading-1-3"]
+        document.getElementById("services-section-3-list-1-1").textContent = data["services-section-3-list-1-1"]
+        document.getElementById("services-section-3-list-1-2").textContent = data["services-section-3-list-1-2"]
+        document.getElementById("services-section-3-list-1-3").textContent = data["services-section-3-list-1-3"]
+
+        document.getElementById("services-section-4-heading-1").textContent = data["services-section-4-heading-1"]
+        document.getElementById("services-section-4-description-1").textContent = data["services-section-4-description-1"]
+        document.getElementById("services-section-4-image-1").src = data["services-section-4-image-1"]
+        document.getElementById("services-section-4-card-number-1-1").textContent = data["services-section-4-card-number-1-1"]
+        document.getElementById("services-section-4-card-description-1-1").textContent = data["services-section-4-card-description-1-1"]
+        document.getElementById("services-section-4-card-number-1-2").textContent = data["services-section-4-card-number-1-2"]
+        document.getElementById("services-section-4-card-description-1-2").textContent = data["services-section-4-card-description-1-2"]
+        document.getElementById("services-section-4-card-number-1-3").textContent = data["services-section-4-card-number-1-3"]
+        document.getElementById("services-section-4-card-description-1-3").textContent = data["services-section-4-card-description-1-3"]
+        document.getElementById("services-section-4-card-number-1-4").textContent = data["services-section-4-card-number-1-4"]
+        document.getElementById("services-section-4-card-description-1-4").textContent = data["services-section-4-card-description-1-4"]
+
+      })
+  </script>
+
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("navMenu");
+    const overlay = document.getElementById("overlay");
+    const closeBtn = document.getElementById("closeNavBtn");
+
+    function openMobileNav() {
+      if (window.innerWidth <= 860) {
+        navMenu.classList.add("active");
+        overlay.classList.add("show");
+        overlay.classList.remove("hidden");
+      }
     }
-  }
 
-  function closeMobileNav() {
-    navMenu.classList.remove("active");
-    overlay.classList.remove("show");
-    overlay.classList.add("hidden");
-  }
+    function closeMobileNav() {
+      navMenu.classList.remove("active");
+      overlay.classList.remove("show");
+      overlay.classList.add("hidden");
+    }
 
-  hamburger.addEventListener("click", openMobileNav);
-  closeBtn.addEventListener("click", closeMobileNav);
-  overlay.addEventListener("click", closeMobileNav);
-</script>
+    hamburger.addEventListener("click", openMobileNav);
+    closeBtn.addEventListener("click", closeMobileNav);
+    overlay.addEventListener("click", closeMobileNav);
+  </script>
 
 </body>
 

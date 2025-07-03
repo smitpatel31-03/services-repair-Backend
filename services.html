@@ -64,32 +64,32 @@
     <section class="s-services-cards-div">
       <a href="services1.html">
         <div class="s-services-card" id="s-services-card-1">
-          <p id="s-services-1">Computer Hardware & Mobile Repair</p>
+          <p class="service1-name">Computer Hardware & Mobile Repair</p>
         </div>
       </a>
       <a href="services2.html">
         <div class="s-services-card" id="s-services-card-2">
-          <p id="s-services-2">Computer Hardware & Mobile Repair</p>
+          <p class="service2-name">Computer Hardware & Mobile Repair</p>
         </div>
       </a>
       <a href="services3.html">
         <div class="s-services-card" id="s-services-card-3">
-          <p id="s-services-3">Computer Hardware & Mobile Repair</p>
+          <p class="service3-name">Computer Hardware & Mobile Repair</p>
         </div>
       </a>
       <a href="services4.html">
         <div class="s-services-card" id="s-services-card-4">
-          <p id="s-services-4">Computer Hardware & Mobile Repair</p>
+          <p class="service4-name">Computer Hardware & Mobile Repair</p>
         </div>
       </a>
       <a href="services5.html">
         <div class="s-services-card" id="s-services-card-5">
-          <p id="s-services-5">Computer Hardware & Mobile Repair</p>
+          <p class="service5-name">Computer Hardware & Mobile Repair</p>
         </div>
       </a>
       <a href="services6.html">
         <div class="s-services-card" id="s-services-card-6">
-          <p id="s-services-6">Computer Hardware & Mobile Repair</p>
+          <p class="service6-name">Computer Hardware & Mobile Repair</p>
         </div>
       </a>
     </section>
@@ -142,8 +142,9 @@
 
         <div class="a-faq-card">
           <div class="a-faq-card-section-1">
-            <div id="a-faq-rating" class="a-faq-rating-class">
-              4.9 ⭐
+            <div  class="a-faq-rating-class">
+              <p id="a-faq-rating">4.9</p>
+              <p>⭐</p>
             </div>
             <div class="a-faq-photos-description-div">
               <div class="a-faq-photos-div">
@@ -161,7 +162,7 @@
                 d="M19.5 22a1.5 1.5 0 0 0 1.5-1.5V17a1.5 1.5 0 0 0-1.5-1.5c-1.17 0-2.32-.18-3.42-.55a1.51 1.51 0 0 0-1.52.37l-1.44 1.44a14.77 14.77 0 0 1-5.89-5.89l1.43-1.43c.41-.39.56-.97.38-1.53c-.36-1.09-.54-2.24-.54-3.41A1.5 1.5 0 0 0 7 3H3.5A1.5 1.5 0 0 0 2 4.5C2 14.15 9.85 22 19.5 22M3.5 4H7a.5.5 0 0 1 .5.5c0 1.28.2 2.53.59 3.72c.05.14.04.34-.12.5L6 10.68c1.65 3.23 4.07 5.65 7.31 7.32l1.95-1.97c.14-.14.33-.18.51-.13c1.2.4 2.45.6 3.73.6a.5.5 0 0 1 .5.5v3.5a.5.5 0 0 1-.5.5C10.4 21 3 13.6 3 4.5a.5.5 0 0 1 .5-.5" />
             </svg>
             <a href="tel:+9190909090" class="mobile-number">
-              <p>+91 90909009</p>
+              +91 90909009
             </a>
           </div>
         </div>
@@ -275,7 +276,7 @@
         </div>
         <div class="footer-address-desription-div">
           <h4 class="footer-address-card">Address</h4>
-          <p><a href="" class="address">6985 SW1A 1AA United Kingdom</a></p>
+          <p><a href="" class="address c-address">6985 SW1A 1AA United Kingdom</a></p>
         </div>
       </div>
       <div class="fooer-social-links-heading-div">
@@ -409,34 +410,108 @@
       </div>
     </section>
     <section class="footer-section-3">
-      <h5 class="footer-copyright-heading">Copyright © 2025 All Rights Reserved.</h5>
+      <h5 class="footer-copyright-heading">Copyright © <a href="" class="year">2025</a>All Rights Reserved.</h5>
     </section>
   </footer>
 
-<script>
-  const hamburger = document.getElementById("hamburger");
-  const navMenu = document.getElementById("navMenu");
-  const overlay = document.getElementById("overlay");
-  const closeBtn = document.getElementById("closeNavBtn");
+  <script>
+    fetch("https://script.google.com/macros/s/AKfycbw2ccaASiheu8WAOFpDZz05WNZhxvcdTO8MZBtdo7VvVTJupclgo33deEeFJoA1Vjbu/exec")
+      .then(res => res.json())
+      .then(data => {
+        console.log("data:", data);
 
-  function openMobileNav() {
-    if (window.innerWidth <= 860) {
-      navMenu.classList.add("active");
-      overlay.classList.add("show");
-      overlay.classList.remove("hidden");
+        let year = new Date()
+        const curruntYear = year.getFullYear()
+
+        document.querySelectorAll(".logo").forEach(el => el.src = data["logo"])
+        document.querySelector(".header-button-link").textContent = data["header-button-link"]
+
+        document.getElementById("footer-logo-description").textContent = data["footer-logo-description"]
+        document.querySelector(".c-address").textContent = data["address"]
+      
+        if(data["linkedin"] && data["linkedin"].trim() !== ""){
+          document.querySelector(".linkedin").style.display = "inline-flex"
+        }
+        if(data["X"] && data["X"].trim() !== ""){
+          document.querySelector(".X").style.display = "inline-flex"
+        }
+        if(data["youtube"] && data["youtube"].trim() !== ""){
+          document.querySelector(".youtube").style.display = "inline-flex"
+        }
+
+        document.querySelector(".footer-subscriber-heading").textContent = data["footer-subscriber-heading"]
+        document.querySelector(".footer-subscriber-description").textContent = data["footer-subscriber-description"]
+
+        document.querySelector(".year").textContent = curruntYear
+        document.getElementById("s-services-card-1").style.backgroundImage = `url('${data["services-image-1"]}')`
+        document.querySelectorAll(".service1-name").forEach(el => el.textContent = data["service-name-1"])
+        document.getElementById("s-services-card-2").style.backgroundImage = `url('${data["services-image-2"]}')`
+        document.querySelectorAll(".service2-name").forEach(el => el.textContent = data["service-name-2"])
+        document.getElementById("s-services-card-3").style.backgroundImage = `url('${data["services-image-3"]}')`
+        document.querySelectorAll(".service3-name").forEach(el => el.textContent = data["service-name-3"])
+        document.getElementById("s-services-card-4").style.backgroundImage = `url('${data["services-image-4"]}')`
+        document.querySelectorAll(".service4-name").forEach(el => el.textContent = data["service-name-4"])
+        document.getElementById("s-services-card-5").style.backgroundImage = `url('${data["services-image-5"]}')`
+        document.querySelectorAll(".service5-name").forEach(el => el.textContent = data["service-name-5"])
+        document.getElementById("s-services-card-6").style.backgroundImage = `url('${data["services-image-6"]}')`
+        document.querySelectorAll(".service6-name").forEach(el => el.textContent = data["service-name-6"])
+
+        document.querySelector(".s-what-we-do-tagline").textContent = data["s-what-we-do-tagline"]
+        document.getElementById("s-what-we-do-heading").textContent = data["s-what-we-do-heading"]
+        document.querySelector(".s-what-we-do-heading-description").textContent = data["s-what-we-do-heading-description"]
+        document.getElementById("s-what-we-do-description-heading-1").textContent = data["s-what-we-do-description-heading-1"]
+        document.getElementById("s-what-we-do-description-content-1").textContent = data["s-what-we-do-description-content-1"]
+        document.getElementById("s-what-we-do-description-heading-2").textContent = data["s-what-we-do-description-heading-2"]
+        document.getElementById("s-what-we-do-description-content-2").textContent = data["s-what-we-do-description-content-2"]
+        document.getElementById("s-what-we-do-image").src = data["s-what-we-do-image"]
+
+        document.getElementById("a-faq-heading").textContent = data["a-faq-heading"]
+        document.getElementById("a-faq-description").textContent = data["a-faq-description"]
+        document.getElementById("a-faq-rating").textContent = data["a-faq-rating"]
+        document.querySelector(".a-faq-image-1").textContent = data["testimonial-image-1"]
+        document.querySelector(".a-faq-image-2").textContent = data["testimonial-image-2"]
+        document.querySelector(".a-faq-image-3").textContent = data["testimonial-image-3"]
+        document.querySelector(".a-faq-image-4").textContent = data["testimonial-image-4"]
+        document.querySelectorAll(".mobile-number").forEach(el => {
+          el.href = `tel:+91${data["mobile-number"]}`
+          el.textContent = `+91 ${data["mobile-number"]}`
+        })
+        document.getElementById("a-faq-main-card-heading-1").textContent = data["a-faq-main-card-heading-1"]
+        document.getElementById("a-faq-main-card-description-1").textContent = data["a-faq-main-card-description-1"]
+        document.getElementById("a-faq-main-card-heading-2").textContent = data["a-faq-main-card-heading-2"]
+        document.getElementById("a-faq-main-card-description-2").textContent = data["a-faq-main-card-description-2"]
+        document.getElementById("a-faq-main-card-heading-3").textContent = data["a-faq-main-card-heading-3"]
+        document.getElementById("a-faq-main-card-description-3").textContent = data["a-faq-main-card-description-3"]
+        document.getElementById("a-faq-main-card-heading-4").textContent = data["a-faq-main-card-heading-4"]
+        document.getElementById("a-faq-main-card-description-4").textContent = data["a-faq-main-card-description-4"]
+
+      })
+  </script>
+
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("navMenu");
+    const overlay = document.getElementById("overlay");
+    const closeBtn = document.getElementById("closeNavBtn");
+
+    function openMobileNav() {
+      if (window.innerWidth <= 860) {
+        navMenu.classList.add("active");
+        overlay.classList.add("show");
+        overlay.classList.remove("hidden");
+      }
     }
-  }
 
-  function closeMobileNav() {
-    navMenu.classList.remove("active");
-    overlay.classList.remove("show");
-    overlay.classList.add("hidden");
-  }
+    function closeMobileNav() {
+      navMenu.classList.remove("active");
+      overlay.classList.remove("show");
+      overlay.classList.add("hidden");
+    }
 
-  hamburger.addEventListener("click", openMobileNav);
-  closeBtn.addEventListener("click", closeMobileNav);
-  overlay.addEventListener("click", closeMobileNav);
-</script>
+    hamburger.addEventListener("click", openMobileNav);
+    closeBtn.addEventListener("click", closeMobileNav);
+    overlay.addEventListener("click", closeMobileNav);
+  </script>
 
 
   <script>
