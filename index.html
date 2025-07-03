@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/reponsive.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="header">
+    <div id="overlay" class="overlay hidden"></div>
+    <div class="header-container">
+      <!-- Logo -->
+      <div class="header-logo-div">
+        <a href="index.html">
+          <img src="public/images/image.webp" alt="Logo" class="logo" />
+        </a>
+      </div>
+
+      <!-- Hamburger (Mobile only) -->
+      <div class="hamburger" id="hamburger">&#9776;</div>
+
+      <!-- Navigation -->
+      <nav class="nav">
+        <ul class="header-navigation-div" id="navMenu">
+          <li class="close-btn" id="closeNavBtn">&times;</li>
+          <li class="header-list"><a href="index.html">Home</a></li>
+          <li class="header-list"><a href="aboutus.html">About Us</a></li>
+          <li class="header-list">
+            <a href="services.html">Services</a>
+            <ul class="header-list-dropdown-ul">
+              <li class="header-list-dropdown-list">
+                <a href="services1.html" class="service1-name">Services 1</a>
+                <a href="services2.html" class="service2-name">Services 2</a>
+                <a href="services3.html" class="service3-name">Services 3</a>
+                <a href="services4.html" class="service4-name">Services 4</a>
+                <a href="services5.html" class="service5-name">Services 5</a>
+                <a href="services6.html" class="service6-name">Services 6</a>
+              </li>
+            </ul>
+          </li>
+          <li class="header-list"><a href="contsctus.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- CTA Button -->
+      <div class="header-button-div">
+        <a href="contsctus.html#c-form" class="header-button-link">Request A Free Quote</a>
+      </div>
+    </div>
+  </header>
+
+
+  <main>
+    <section class="h-banner-section">
+      <!-- Navigation Buttons -->
+      <div class="h-banner-slider-button h-banner-slider-button-left">
+        <button id="prevBtn">&lt;</button>
+      </div>
+      <div class="h-banner-slider-button h-banner-slider-button-right">
+        <button id="nextBtn">&gt;</button>
+      </div>
+
+      <!-- Slider -->
+      <div class="h-banner-slider" id="hBannerSlider">
+        <div class="h-banner-div h-banner-1">
+          <div class="h-banner-overlay"></div>
+          <div class="h-banner-heading-div">
+            <p id="h-first-banner-first-line" class="h-banner-first-line">Welcome to ...</p>
+            <h1 id="h-first-banner-heading" class="h-banner-heading">Expert repairs for computers & mobiles you trust
+            </h1>
+            <p id="h-first-banner-second-line" class="h-banner-second-line">Fast, reliable repairs for computers and
+              mobile. Our expert technicians use high-quality parts to ensure your devices function like new.</p>
+          </div>
+          <div class="h-banner-button-div">
+            <a href="contsctus.html#c-form"><button id="h-first-banner-button-1" class="h-banner-button">Request A Free
+                Quote</button></a>
+            <span class="h-banner-reviews">
+              <span id="h-first-banner-top-review" class="h-banner-top-review">10K</span>
+              <p id="h-first-banner-review-content" class="h-banner-review-content">More than 10k customer Reviews</p>
+            </span>
+          </div>
+        </div>
+
+        <div class="h-banner-div h-banner-2">
+          <div class="h-banner-overlay"></div>
+          <div class="h-banner-heading-div">
+            <p id="h-second-banner-first-line" class="h-banner-first-line">Welcome to ...</p>
+            <h1 id="h-second-banner-heading" class="h-banner-heading">Second slide content here</h1>
+            <p id="h-second-banner-second-line" class="h-banner-second-line">Some different text for slide 2. Add your
+              own message or call-to-action here.</p>
+          </div>
+          <div class="h-banner-button-div">
+            <a href="contsctus.html#c-form"><button id="h-second-banner-button-1" class="h-banner-button">Request A Free
+                Quote</button></a>
+            <span class="h-banner-reviews">
+              <span id="h-second-banner-top-review" class="h-banner-top-review">9K</span>
+              <p id="h-second-banner-review-content" class="h-banner-review-content">Customer love our service</p>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="h-aboutus-Section">
+      <div class="h-aboutus-photos">
+        <div class="h-aboutus-photos-row1">
+          <div class="h-aboutus-photos-row1-photo">
+            <img src="https://html.awaikenthemes.com/repairit/images/about-img-1.jpg" alt="" id="h-aboutus-photo-1">
+          </div>
+          <div class="h-aboutus-photos-row1-exprience-card-div">
+            <div class="h-aboutus-photos-row1-exprience-card-1" class="h-aboutus-photos-row1-exprience-card">
+              <p>25+</p>
+              <p>Years of exprience</p>
+            </div>
+            <div class="h-aboutus-photos-row1-exprience-card-2" class="h-aboutus-photos-row1-exprience-card">
+              <p>24/7 repair support</p>
+            </div>
+          </div>
+        </div>
+        <div class="h-aboutus-photos-row2">
+          <img src="https://html.awaikenthemes.com/repairit/images/about-img-2.jpg" alt="" id="h-aboutus-photo-2">
+        </div>
+      </div>
+      <div class="h-aboutus-description">
+        <p>About Us</p>
+        <h2 id="h-about-us-heading">Your Devices our expert repair care</h2>
+        <p id="h-about-us-discription">We specialize in fast, reliable repairs for computers and mobile devices. Our
+          skilled technicians ensure your tech is in safe hands, bringing your devices back to life with precision and
+          care.</p>
+        <div class="h-aboutus-description-taglines1-card-div">
+          <div class="h-aboutus-description-tagline1-card" id="h-aboutus-description-tagline1-card-1">
+            <img src="" alt="">
+            <p>fast and reliable service</p>
+          </div>
+          <div class="h-aboutus-description-tagline1-card" id="h-aboutus-description-tagline1-card-2">
+            <img src="" alt="">
+            <p>fast and reliable service</p>
+          </div>
+        </div>
+        <div class="h-aboutus-description-taglines2-div">
+          <p class="h-aboutus-description-tagline2" id="h-aboutus-description-tagline2-1">Comprehensive diagnostics
+            fixes</p>
+          <p class="h-aboutus-description-tagline2" id="h-aboutus-description-tagline2-2">High-quality replacement parts
+          </p>
+        </div>
+        <div class="h-aboutus-button-div">
+          <a href="aboutus.html"><button id="h-aboutus-button">More about us</button></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="h-services-section">
+      <div class="h-services-heading-button-div">
+        <div class="h-services-heading-div">
+          <p>SERVICES</p>
+          <h2 id="h-services-heading">Our repair services for all coputer & mobile</h2>
+        </div>
+        <div class="h-services-button-div">
+          <a href="services.html"><button id="h-services-button">View All Services</button></a>
+        </div>
+      </div>
+      <div class="h-services-cards-div">
+        <a href="services1.html">
+          <div class="h-services-card" id="h-services-card-1">
+            <p>Computer Hardware & Mobile Repair</p>
+          </div>
+        </a>
+        <a href="services2.html">
+          <div class="h-services-card" id="h-services-card-2">
+            <p>Computer Hardware & Mobile Repair</p>
+          </div>
+        </a>
+        <a href="services3.html">
+          <div class="h-services-card" id="h-services-card-3">
+            <p>Computer Hardware & Mobile Repair</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="h-services-2-section">
+      <div class="h-services-2-divs" id="h-services-2-div-1">
+        <div class="h-services-2-description-button-div" id="h-services-2-description-button-div-1">
+          <div class="h-services-2-description-div">
+            <p id="h-services-2-description-main-tagline-1" class="h-services-2-description-main-tagline">Mobile
+              protection</p>
+            <h2 id="h-services-2-description-heading-1" class="h-services-2-description-heading">Protect your mobile
+              with
+              our solutions</h2>
+            <p id="h-services-2-description-paragraph-1" class="h-services-2-description-paragraph">Keep your mobile
+              safe from damage and security threats with our comprehensive protection solutions. From
+              screen protectors to security software.</p>
+          </div>
+          <div class="h-services-2-list-button-div">
+            <div class="h-services-2-list-div">
+              <li id="h-services-2-list-1-1" class="h-services-2-list">Privacy Protection Solutions</li>
+              <li id="h-services-2-list-1-2" class="h-services-2-list">Water and Dust Resistance</li>
+              <li id="h-services-2-list-1-3" class="h-services-2-list">Custom Mobile Protection Plans</li>
+              <li id="h-services-2-list-1-4" class="h-services-2-list">Durable Screen Protectors</li>
+            </div>
+            <a href="contsctus.html">
+              <button id="h-services-2-button-1" class="h-services-2-button">Contat us</button>
+            </a>
+          </div>
+        </div>
+        <div id="h-Services-2-image-div-1" class="h-Services-2-image-div">
+          <img src="https://html.awaikenthemes.com/repairit/images/project-1.jpg" alt="" class="h-services-2-image"
+            id="g-services-2-image-1">
+        </div>
+      </div>
+
+      <div class="h-services-2-divs" id="h-services-2-div-2">
+        <div class="h-services-2-description-button-div" id="h-services-2-description-button-div-2">
+          <div class="h-services-2-description-div">
+            <p id="h-services-2-description-main-tagline-2" class="h-services-2-description-main-tagline">Mobile
+              protection</p>
+            <h2 id="h-services-2-description-heading-2" class="h-services-2-description-heading">Protect your mobile
+              with
+              our solutions</h2>
+            <p id="h-services-2-description-paragraph-2" class="h-services-2-description-paragraph">Keep your mobile
+              safe from damage and security threats with our comprehensive protection solutions. From
+              screen protectors to security software.</p>
+          </div>
+          <div class="h-services-2-list-button-div">
+            <div class="h-services-2-list-div">
+              <li id="h-services-2-list-2-1" class="h-services-2-list">Privacy Protection Solutions</li>
+              <li id="h-services-2-list-2-2" class="h-services-2-list">Water and Dust Resistance</li>
+              <li id="h-services-2-list-2-3" class="h-services-2-list">Custom Mobile Protection Plans</li>
+              <li id="h-services-2-list-2-4" class="h-services-2-list">Durable Screen Protectors</li>
+            </div>
+            <a href="contsctus.html">
+              <button id="h-services-2-button-2" class="h-services-2-button">Contat us</button>
+            </a>
+          </div>
+        </div>
+        <div id="h-Services-2-image-div-2" class="h-Services-2-image-div">
+          <img src="https://html.awaikenthemes.com/repairit/images/project-5.jpg" alt="" class="h-services-2-image"
+            id="g-services-2-image-2">
+        </div>
+      </div>
+    </section>
+
+    <section class="h-why-choose-us-section">
+      <div class="h-why-chose-us-heading-button-div">
+        <div class="h-why-choose-us-heading-div">
+          <p>WHY CHOOSE US</p>
+          <h2 id="h-why-choose-us-heading">Why trust us for your mobile & computer repairs</h2>
+        </div>
+        <div class="h-why-choose-us-button-div">
+          <a href="aboutus.html">
+            <button id="h-why-choose-us-button">About Us</button>
+          </a>
+        </div>
+      </div>
+
+      <div class="h-why-choose-us-cards-div">
+        <div class="h-why-choose-us-card">
+          <div class="h-why-choose-us-card-svg-div">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path fill="currentColor"
+                d="M12 0c-1.497 0-2.749.965-3.248 2.17a3.45 3.45 0 0 0-.238 1.416a3.5 3.5 0 0 0-1.168-.834a3.5 3.5 0 0 0-1.463-.256a3.5 3.5 0 0 0-2.367 1.02c-1.06 1.058-1.263 2.625-.764 3.83c.179.432.47.82.82 1.154a3.5 3.5 0 0 0-1.402.252C.965 9.251 0 10.502 0 12c0 1.497.965 2.749 2.17 3.248c.437.181.924.25 1.414.236c-.357.338-.65.732-.832 1.17c-.499 1.205-.295 2.772.764 3.83c1.058 1.06 2.625 1.263 3.83.764c.437-.181.83-.476 1.168-.832c-.014.49.057.977.238 1.414C9.251 23.035 10.502 24 12 24c1.497 0 2.749-.965 3.248-2.17a3.45 3.45 0 0 0 .238-1.416c.338.356.73.653 1.168.834c1.205.499 2.772.295 3.83-.764c1.06-1.058 1.263-2.625.764-3.83a3.5 3.5 0 0 0-.834-1.168a3.45 3.45 0 0 0 1.416-.238C23.035 14.749 24 13.498 24 12c0-1.497-.965-2.749-2.17-3.248a3.5 3.5 0 0 0-1.414-.236c.357-.338.65-.732.832-1.17c.499-1.205.295-2.772-.764-3.83a3.5 3.5 0 0 0-2.367-1.02a3.5 3.5 0 0 0-1.463.256c-.437.181-.83.475-1.168.832a3.45 3.45 0 0 0-.238-1.414C14.749.965 13.498 0 12 0m-.041 1.613a1.902 1.902 0 0 1 1.387 3.246v3.893L16.098 6A1.902 1.902 0 1 1 18 7.902l-2.752 2.752h3.893a1.902 1.902 0 1 1 0 2.692h-3.893L18 16.098A1.902 1.902 0 1 1 16.098 18l-2.752-2.752v3.893a1.902 1.902 0 1 1-2.692 0v-3.893L7.902 18A1.902 1.902 0 1 1 6 16.098l2.752-2.752H4.859a1.902 1.902 0 1 1 0-2.692h3.893L6 7.902A1.902 1.902 0 1 1 7.902 6l2.752 2.752V4.859a1.902 1.902 0 0 1 1.305-3.246" />
+            </svg>
+          </div>
+          <p id="h-why-choose-us-tagline-1" class="h-why-choose-us-card-tagline">Fast & Efficient Services</p>
+        </div>
+
+        <div class="h-why-choose-us-card">
+          <div class="h-why-choose-us-card-svg-div">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path fill="currentColor"
+                d="M12 0c-1.497 0-2.749.965-3.248 2.17a3.45 3.45 0 0 0-.238 1.416a3.5 3.5 0 0 0-1.168-.834a3.5 3.5 0 0 0-1.463-.256a3.5 3.5 0 0 0-2.367 1.02c-1.06 1.058-1.263 2.625-.764 3.83c.179.432.47.82.82 1.154a3.5 3.5 0 0 0-1.402.252C.965 9.251 0 10.502 0 12c0 1.497.965 2.749 2.17 3.248c.437.181.924.25 1.414.236c-.357.338-.65.732-.832 1.17c-.499 1.205-.295 2.772.764 3.83c1.058 1.06 2.625 1.263 3.83.764c.437-.181.83-.476 1.168-.832c-.014.49.057.977.238 1.414C9.251 23.035 10.502 24 12 24c1.497 0 2.749-.965 3.248-2.17a3.45 3.45 0 0 0 .238-1.416c.338.356.73.653 1.168.834c1.205.499 2.772.295 3.83-.764c1.06-1.058 1.263-2.625.764-3.83a3.5 3.5 0 0 0-.834-1.168a3.45 3.45 0 0 0 1.416-.238C23.035 14.749 24 13.498 24 12c0-1.497-.965-2.749-2.17-3.248a3.5 3.5 0 0 0-1.414-.236c.357-.338.65-.732.832-1.17c.499-1.205.295-2.772-.764-3.83a3.5 3.5 0 0 0-2.367-1.02a3.5 3.5 0 0 0-1.463.256c-.437.181-.83.475-1.168.832a3.45 3.45 0 0 0-.238-1.414C14.749.965 13.498 0 12 0m-.041 1.613a1.902 1.902 0 0 1 1.387 3.246v3.893L16.098 6A1.902 1.902 0 1 1 18 7.902l-2.752 2.752h3.893a1.902 1.902 0 1 1 0 2.692h-3.893L18 16.098A1.902 1.902 0 1 1 16.098 18l-2.752-2.752v3.893a1.902 1.902 0 1 1-2.692 0v-3.893L7.902 18A1.902 1.902 0 1 1 6 16.098l2.752-2.752H4.859a1.902 1.902 0 1 1 0-2.692h3.893L6 7.902A1.902 1.902 0 1 1 7.902 6l2.752 2.752V4.859a1.902 1.902 0 0 1 1.305-3.246" />
+            </svg>
+          </div>
+          <p id="h-why-choose-us-tagline-2" class="h-why-choose-us-card-tagline">Fast & Efficient Services</p>
+        </div>
+
+        <div class="h-why-choose-us-card">
+          <div class="h-why-choose-us-card-svg-div">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path fill="currentColor"
+                d="M12 0c-1.497 0-2.749.965-3.248 2.17a3.45 3.45 0 0 0-.238 1.416a3.5 3.5 0 0 0-1.168-.834a3.5 3.5 0 0 0-1.463-.256a3.5 3.5 0 0 0-2.367 1.02c-1.06 1.058-1.263 2.625-.764 3.83c.179.432.47.82.82 1.154a3.5 3.5 0 0 0-1.402.252C.965 9.251 0 10.502 0 12c0 1.497.965 2.749 2.17 3.248c.437.181.924.25 1.414.236c-.357.338-.65.732-.832 1.17c-.499 1.205-.295 2.772.764 3.83c1.058 1.06 2.625 1.263 3.83.764c.437-.181.83-.476 1.168-.832c-.014.49.057.977.238 1.414C9.251 23.035 10.502 24 12 24c1.497 0 2.749-.965 3.248-2.17a3.45 3.45 0 0 0 .238-1.416c.338.356.73.653 1.168.834c1.205.499 2.772.295 3.83-.764c1.06-1.058 1.263-2.625.764-3.83a3.5 3.5 0 0 0-.834-1.168a3.45 3.45 0 0 0 1.416-.238C23.035 14.749 24 13.498 24 12c0-1.497-.965-2.749-2.17-3.248a3.5 3.5 0 0 0-1.414-.236c.357-.338.65-.732.832-1.17c.499-1.205.295-2.772-.764-3.83a3.5 3.5 0 0 0-2.367-1.02a3.5 3.5 0 0 0-1.463.256c-.437.181-.83.475-1.168.832a3.45 3.45 0 0 0-.238-1.414C14.749.965 13.498 0 12 0m-.041 1.613a1.902 1.902 0 0 1 1.387 3.246v3.893L16.098 6A1.902 1.902 0 1 1 18 7.902l-2.752 2.752h3.893a1.902 1.902 0 1 1 0 2.692h-3.893L18 16.098A1.902 1.902 0 1 1 16.098 18l-2.752-2.752v3.893a1.902 1.902 0 1 1-2.692 0v-3.893L7.902 18A1.902 1.902 0 1 1 6 16.098l2.752-2.752H4.859a1.902 1.902 0 1 1 0-2.692h3.893L6 7.902A1.902 1.902 0 1 1 7.902 6l2.752 2.752V4.859a1.902 1.902 0 0 1 1.305-3.246" />
+            </svg>
+          </div>
+          <p id="h-why-choose-us-tagline-3" class="h-why-choose-us-card-tagline">Fast & Efficient Services</p>
+        </div>
+
+        <div class="h-why-choose-us-card">
+          <div class="h-why-choose-us-card-svg-div">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path fill="currentColor"
+                d="M12 0c-1.497 0-2.749.965-3.248 2.17a3.45 3.45 0 0 0-.238 1.416a3.5 3.5 0 0 0-1.168-.834a3.5 3.5 0 0 0-1.463-.256a3.5 3.5 0 0 0-2.367 1.02c-1.06 1.058-1.263 2.625-.764 3.83c.179.432.47.82.82 1.154a3.5 3.5 0 0 0-1.402.252C.965 9.251 0 10.502 0 12c0 1.497.965 2.749 2.17 3.248c.437.181.924.25 1.414.236c-.357.338-.65.732-.832 1.17c-.499 1.205-.295 2.772.764 3.83c1.058 1.06 2.625 1.263 3.83.764c.437-.181.83-.476 1.168-.832c-.014.49.057.977.238 1.414C9.251 23.035 10.502 24 12 24c1.497 0 2.749-.965 3.248-2.17a3.45 3.45 0 0 0 .238-1.416c.338.356.73.653 1.168.834c1.205.499 2.772.295 3.83-.764c1.06-1.058 1.263-2.625.764-3.83a3.5 3.5 0 0 0-.834-1.168a3.45 3.45 0 0 0 1.416-.238C23.035 14.749 24 13.498 24 12c0-1.497-.965-2.749-2.17-3.248a3.5 3.5 0 0 0-1.414-.236c.357-.338.65-.732.832-1.17c.499-1.205.295-2.772-.764-3.83a3.5 3.5 0 0 0-2.367-1.02a3.5 3.5 0 0 0-1.463.256c-.437.181-.83.475-1.168.832a3.45 3.45 0 0 0-.238-1.414C14.749.965 13.498 0 12 0m-.041 1.613a1.902 1.902 0 0 1 1.387 3.246v3.893L16.098 6A1.902 1.902 0 1 1 18 7.902l-2.752 2.752h3.893a1.902 1.902 0 1 1 0 2.692h-3.893L18 16.098A1.902 1.902 0 1 1 16.098 18l-2.752-2.752v3.893a1.902 1.902 0 1 1-2.692 0v-3.893L7.902 18A1.902 1.902 0 1 1 6 16.098l2.752-2.752H4.859a1.902 1.902 0 1 1 0-2.692h3.893L6 7.902A1.902 1.902 0 1 1 7.902 6l2.752 2.752V4.859a1.902 1.902 0 0 1 1.305-3.246" />
+            </svg>
+          </div>
+          <p id="h-why-choose-us-tagline-4" class="h-why-choose-us-card-tagline">Fast & Efficient Services</p>
+        </div>
+      </div>
+
+      <div class="h-why-choose-us-image-description">
+        <div class="h-why-choose-us-image-div">
+          <img src="https://html.awaikenthemes.com/repairit/images/why-choose-image.jpg" alt=""
+            id="h-why-choose-us-image">
+        </div>
+        <div class="h-why-choose-us-description-div">
+          <p id="h-why-choose-us-discription-1">"We provide reliable and efficient repair services for mobiles and
+            computers. With certified technicians, genuine parts, and transparent pricing, we prioritize your
+            satisfaction and device security."</p>
+
+          <p id="h-why-choose-us-discription-2">At our repair center, we prioritize your trust and satisfaction. Our
+            team of certified technicians is dedicated to providing high-quality repairs for both mobile devices and
+            computers. We use only genuine replacement parts to ensure the longevity and performance of your devices.
+            With transparent pricing, quick turnaround times, and exceptional customer support, we make the repair
+            process hassle-free and reliable. Your device's security and functionality are our top priorities, giving
+            you peace of mind with every repair.</p>
+
+          <div class="h-why-choose-us-description-cards-div">
+            <div class="h-why-choose-us-description-card" id="h-why-choose-us-description-card-1">
+              <h3 id="h-why-choose-us-description-card-heading-1">25+</h3>
+              <p id="h-why-choose-us-description-card-content-1">Years of Exprience</p>
+            </div>
+            <div class="h-why-choose-us-description-card" id="h-why-choose-us-description-card-2">
+              <h3 id="h-why-choose-us-description-card-heading-2">25+</h3>
+              <p id="h-why-choose-us-description-card-content-2">Years of Exprience</p>
+            </div>
+            <div class="h-why-choose-us-description-card" id="h-why-choose-us-description-card-3">
+              <h3 id="h-why-choose-us-description-card-heading-3">25+</h3>
+              <p id="h-why-choose-us-description-card-content-3">Years of Exprience</p>
+            </div>
+            <div class="h-why-choose-us-description-card" id="h-why-choose-us-description-card-4">
+              <h3 id="h-why-choose-us-description-card-heading-4">25+</h3>
+              <p id="h-why-choose-us-description-card-content-4">Years of Exprience</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contactus">
+      <div class="contactus-heading">
+        <div class="contactus-subtitle">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <p>CONTACT US</p>
+        </div>
+        <h3>Please Visit Our Office</h3>
+      </div>
+
+      <div class="contactus-contact-details">
+        <div class="contactus-detail-card">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="M19.5 22a1.5 1.5 0 0 0 1.5-1.5V17a1.5 1.5 0 0 0-1.5-1.5c-1.17 0-2.32-.18-3.42-.55a1.51 1.51 0 0 0-1.52.37l-1.44 1.44a14.77 14.77 0 0 1-5.89-5.89l1.43-1.43c.41-.39.56-.97.38-1.53c-.36-1.09-.54-2.24-.54-3.41A1.5 1.5 0 0 0 7 3H3.5A1.5 1.5 0 0 0 2 4.5C2 14.15 9.85 22 19.5 22M3.5 4H7a.5.5 0 0 1 .5.5c0 1.28.2 2.53.59 3.72c.05.14.04.34-.12.5L6 10.68c1.65 3.23 4.07 5.65 7.31 7.32l1.95-1.97c.14-.14.33-.18.51-.13c1.2.4 2.45.6 3.73.6a.5.5 0 0 1 .5.5v3.5a.5.5 0 0 1-.5.5C10.4 21 3 13.6 3 4.5a.5.5 0 0 1 .5-.5" />
+          </svg>
+          <a href="tel:+91909090909" class="mobile-number">+91 9090909090</a>
+        </div>
+        <div class="contactus-detail-card">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0l-8 5l-8-5zm0 12H4V8l8 5l8-5z" />
+          </svg>
+          <a href="mailto:abc@gmail.com" class="email">abc@gmail.com</a>
+        </div>
+        <div class="contactus-detail-card">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="M12 14c2.206 0 4-1.794 4-4s-1.794-4-4-4s-4 1.794-4 4s1.794 4 4 4m0-6c1.103 0 2 .897 2 2s-.897 2-2 2s-2-.897-2-2s.897-2 2-2" />
+            <path fill="currentColor"
+              d="M11.42 21.814a1 1 0 0 0 1.16 0C12.884 21.599 20.029 16.44 20 10c0-4.411-3.589-8-8-8S4 5.589 4 9.995c-.029 6.445 7.116 11.604 7.42 11.819M12 4c3.309 0 6 2.691 6 6.005c.021 4.438-4.388 8.423-6 9.73c-1.611-1.308-6.021-5.294-6-9.735c0-3.309 2.691-6 6-6" />
+          </svg>
+          <a href="https://maps.app.goo.gl/CwhgD9qh2xixfw8W9" class="address">Open map</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials-section">
+      <div class="testimonial-heading-button-div">
+        <div class="testimonail-heading-div">
+          <p>TESTIMONIAL</p>
+          <h2 id="testimonial-heading">Here From Our Statisfied Customer</h2>
+        </div>
+        <div class="testimonial-buttton-div">
+          <button id="testimonial-button"></button>
+        </div>
+      </div>
+      <div class="testimonial-wrapper">
+        <div class="tetimonial-cards-div">
+          <div class="testimonial-card" id="testimonail-card-1">
+            <div class="testimonial-image-review-div">
+              <div class="testimonial-image-name-div">
+                <div class="testimonial-image-div">
+                  <img src="https://html.awaikenthemes.com/repairit/images/author-1.jpg" alt="" id="testimonial-image-1"
+                    class="testimoial-image">
+                </div>
+                <div class="testimonial-name-position-div">
+                  <h4 id="testimonial-client-name-1" class="
+                testimonial-name">Mark Robinson</h4>
+                  <h5 id="testimonial-client-position-1">Repair Specialist</h5>
+                </div>
+              </div>
+              <div class="testimonial-review-div">
+                <h5 id="testimonial-client-review-1">⭐⭐⭐⭐⭐</h5>
+              </div>
+            </div>
+            <div class="testimoial-review-description-div">
+              <p id="testimoial-review-description-1">
+                "Fantastic service! My phone screen was cracked & they had it fixed in no time. Professional, friendly &
+                affordable recommend Amazing experience! They recovered all my data after my laptop crashed. The team
+                was so helpful clearly. 5 stars!"
+              </p>
+            </div>
+          </div>
+
+          <div class="testimonial-card" id="testimonail-card-2">
+            <div class="testimonial-image-review-div">
+              <div class="testimonial-image-name-div">
+                <div class="testimonial-image-div">
+                  <img src="https://html.awaikenthemes.com/repairit/images/author-2.jpg" alt="" id="testimonial-image-2"
+                    class="testimoial-image">
+                </div>
+                <div class="testimonial-name-position-div">
+                  <h4 id="testimonial-client-name-2" class="
+                testimonial-name">abcd</h4>
+                  <h5 id="testimonial-client-position-2">Repair Specialist</h5>
+                </div>
+              </div>
+              <div class="testimonial-review-div">
+                <h5 id="testimonial-client-review-2">⭐⭐⭐⭐⭐</h5>
+              </div>
+            </div>
+            <div class="testimoial-review-description-div">
+              <p id="testimoial-review-description-2">
+                "Fantastic service! My phone screen was cracked & they had it fixed in no time. Professional, friendly &
+                affordable recommend Amazing experience! They recovered all my data after my laptop crashed. The team
+                was so helpful clearly. 5 stars!"
+              </p>
+            </div>
+          </div>
+
+          <div class="testimonial-card" id="testimonail-card-3">
+            <div class="testimonial-image-review-div">
+              <div class="testimonial-image-name-div">
+                <div class="testimonial-image-div">
+                  <img src="https://html.awaikenthemes.com/repairit/images/author-3.jpg" alt="" id="testimonial-image-3"
+                    class="testimoial-image">
+                </div>
+                <div class="testimonial-name-position-div">
+                  <h4 id="testimonial-client-name-3" class="
+                testimonial-name">erfrfrf</h4>
+                  <h5 id="testimonial-client-position-3">Repair Specialist</h5>
+                </div>
+              </div>
+              <div class="testimonial-review-div">
+                <h5 id="testimonial-client-review-3">⭐⭐⭐⭐⭐</h5>
+              </div>
+            </div>
+            <div class="testimoial-review-description-div">
+              <p id="testimoial-review-description-3">
+                "Fantastic service! My phone screen was cracked & they had it fixed in no time. Professional, friendly &
+                affordable recommend Amazing experience! They recovered all my data after my laptop crashed. The team
+                was so helpful clearly. 5 stars!"
+              </p>
+            </div>
+          </div>
+
+          <div class="testimonial-card" id="testimonail-card-4">
+            <div class="testimonial-image-review-div">
+              <div class="testimonial-image-name-div">
+                <div class="testimonial-image-div">
+                  <img src="https://html.awaikenthemes.com/repairit/images/author-4.jpg" alt="" id="testimonial-image-4"
+                    class="testimoial-image">
+                </div>
+                <div class="testimonial-name-position-div">
+                  <h4 id="testimonial-client-name-4" class="
+                testimonial-name">Madvcfdv</h4>
+                  <h5 id="testimonial-client-position-4">Repair Specialist</h5>
+                </div>
+              </div>
+              <div class="testimonial-review-div">
+                <h5 id="testimonial-client-review-4">⭐⭐⭐⭐⭐</h5>
+              </div>
+            </div>
+            <div class="testimoial-review-description-div">
+              <p id="testimoial-review-description-4">
+                "Fantastic service! My phone screen was cracked & they had it fixed in no time. Professional, friendly &
+                affordable recommend Amazing experience! They recovered all my data after my laptop crashed. The team
+                was so helpful clearly. 5 stars!"
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="testimonial-navigation">
+          <button id="prevButton">‹</button>
+          <button id="nextButton">›</button>
+        </div>
+        <div id="testimonialDots" class="testimonial-dots"></div>
+      </div>
+
+    </section>
+
+
+  </main>
+
+  <footer class="footer">
+    <section class="footer-section-1">
+      <div class="footer-logo-div">
+        <img src="public/images/image.webp" alt="" class="logo">
+        <p id="footer-logo-description">Your trusted partner for expert device repairs. We provide fast, affordable
+          repair services.</p>
+      </div>
+      <div class="footer-address-div">
+        <div class="footer-address-svg-div">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="footer-address-svg">
+            <rect width="24" height="24" fill="none" />
+            <path fill="currentColor"
+              d="M12 3a7 7 0 0 0-7 7c0 2.862 1.782 5.623 3.738 7.762A26 26 0 0 0 12 20.758q.262-.201.615-.49a26 26 0 0 0 2.647-2.504C17.218 15.623 19 12.863 19 10a7 7 0 0 0-7-7m0 20.214l-.567-.39l-.003-.002l-.006-.005l-.02-.014l-.075-.053l-.27-.197a28 28 0 0 1-3.797-3.44C5.218 16.875 3 13.636 3 9.999a9 9 0 0 1 18 0c0 3.637-2.218 6.877-4.262 9.112a28 28 0 0 1-3.796 3.44a17 17 0 0 1-.345.251l-.021.014l-.006.005l-.002.001zM12 8a2 2 0 1 0 0 4a2 2 0 0 0 0-4m-4 2a4 4 0 1 1 8 0a4 4 0 0 1-8 0" />
+          </svg>
+        </div>
+        <div class="footer-address-desription-div">
+          <h4 class="footer-address-card">Address</h4>
+          <p><a href="" class="address">6985 SW1A 1AA United Kingdom</a></p>
+        </div>
+      </div>
+      <div class="fooer-social-links-heading-div">
+        <h4 class="footor-social-links-heading">Follow Our On:</h4>
+        <div class="fooer-social-links-div">
+          <a href="" class="facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              class="footer-social-link-svg">
+              <rect width="24" height="24" fill="none" />
+              <path fill="currentColor"
+                d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4z" />
+            </svg>
+          </a>
+          <a href="" class="instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              class="footer-social-link-svg">
+              <rect width="24" height="24" fill="none" />
+              <g fill="none" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 16a4 4 0 1 0 0-8a4 4 0 0 0 0 8" />
+                <path d="M3 16V8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5Z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="m17.5 6.51l.01-.011" />
+              </g>
+            </svg>
+          </a>
+          <a href="" class="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              class="footer-social-link-svg">
+              <rect width="24" height="24" fill="none" />
+              <g fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M12.51 8.796v1.697a3.74 3.74 0 0 1 3.288-1.684c3.455 0 4.202 2.16 4.202 4.97V19.5h-3.2v-5.072c0-1.21-.244-2.766-2.128-2.766c-1.827 0-2.139 1.317-2.139 2.676V19.5h-3.19V8.796h3.168ZM7.2 6.106a1.61 1.61 0 0 1-.988 1.483a1.595 1.595 0 0 1-1.743-.348A1.607 1.607 0 0 1 5.6 4.5a1.6 1.6 0 0 1 1.6 1.606"
+                  clip-rule="evenodd" />
+                <path d="M7.2 8.809H4V19.5h3.2z" />
+              </g>
+            </svg>
+          </a>
+          <a href="" class="youtube">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              class="footer-social-link-svg">
+              <rect width="24" height="24" fill="none" />
+              <g fill="none">
+                <path
+                  d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                <path fill="currentColor"
+                  d="M12 4c.855 0 1.732.022 2.582.058l1.004.048l.961.057l.9.061l.822.064a3.8 3.8 0 0 1 3.494 3.423l.04.425l.075.91c.07.943.122 1.971.122 2.954s-.052 2.011-.122 2.954l-.075.91l-.04.425a3.8 3.8 0 0 1-3.495 3.423l-.82.063l-.9.062l-.962.057l-1.004.048A62 62 0 0 1 12 20a62 62 0 0 1-2.582-.058l-1.004-.048l-.961-.057l-.9-.062l-.822-.063a3.8 3.8 0 0 1-3.494-3.423l-.04-.425l-.075-.91A41 41 0 0 1 2 12c0-.983.052-2.011.122-2.954l.075-.91l.04-.425A3.8 3.8 0 0 1 5.73 4.288l.821-.064l.9-.061l.962-.057l1.004-.048A62 62 0 0 1 12 4m0 2c-.825 0-1.674.022-2.5.056l-.978.047l-.939.055l-.882.06l-.808.063a1.8 1.8 0 0 0-1.666 1.623C4.11 9.113 4 10.618 4 12s.11 2.887.227 4.096c.085.872.777 1.55 1.666 1.623l.808.062l.882.06l.939.056l.978.047c.826.034 1.675.056 2.5.056s1.674-.022 2.5-.056l.978-.047l.939-.055l.882-.06l.808-.063a1.8 1.8 0 0 0 1.666-1.623C19.89 14.887 20 13.382 20 12s-.11-2.887-.227-4.096a1.8 1.8 0 0 0-1.666-1.623l-.808-.062l-.882-.06l-.939-.056l-.978-.047A61 61 0 0 0 12 6m-2 3.575a.6.6 0 0 1 .819-.559l.081.04l4.2 2.424a.6.6 0 0 1 .085.98l-.085.06l-4.2 2.425a.6.6 0 0 1-.894-.43l-.006-.09z" />
+              </g>
+            </svg>
+          </a>
+
+          <a href="" class="X">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+              class="footer-social-link-svg">
+              <rect width="16" height="16" fill="none" />
+              <path fill="currentColor"
+                d="M9.294 6.928L14.357 1h-1.2L8.762 6.147L5.25 1H1.2l5.31 7.784L1.2 15h1.2l4.642-5.436L10.751 15h4.05zM7.651 8.852l-.538-.775L2.832 1.91h1.843l3.454 4.977l.538.775l4.491 6.47h-1.843z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="footer-section-2">
+      <div class="footer-contact-details-div">
+
+        <div class="footer-contact-details-crad-div">
+          <div class="footer-contact-details-card-svg-div">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              class="footer-contact-details-svg">
+              <rect width="24" height="24" fill="none" />
+              <path fill="currentColor"
+                d="m21 15.46l-5.27-.61l-2.52 2.52a15.05 15.05 0 0 1-6.59-6.59l2.53-2.53L8.54 3H3.03C2.45 13.18 10.82 21.55 21 20.97z" />
+            </svg>
+          </div>
+          <div class="footer-contact-details-description-div">
+            <h4 class="footer-contact-details-heading" id="footer-contact-details-mobile-number-heading">Urgent Support?
+            </h4>
+            <p><a href="tel:+919876543210" class="mobile-number">+91 98765 43210</a></p>
+          </div>
+        </div>
+
+        <div class="footer-contact-details-crad-div">
+          <div class="footer-contact-details-card-svg-div">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              class="footer-contact-details-svg">
+              <rect width="24" height="24" fill="none" />
+              <path fill="currentColor"
+                d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0l-8 5l-8-5zm0 12H4V8l8 5l8-5z" />
+            </svg>
+          </div>
+          <div class="footer-contact-details-description-div">
+            <h4 class="footer-contact-details-heading" id="footer-contact-details-mobile-number-heading">E-mail Us</h4>
+            <p><a href="mailto:abc@gmail.com" class="email">abc@gmail.com</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-navigation-div">
+        <div class="footer-main-navigation-div">
+          <h4 class="footer-navigation-heading">Quick Links</h4>
+          <ul class="footer-navigation-lists-ul">
+            <li class="footer-navigation-list"><a href="index.html">Home</a></li>
+            <li class="footer-navigation-list"><a href="aboutus.html">About Us</a></li>
+            <li class="footer-navigation-list"><a href="services.html">Services</a></li>
+            <li class="footer-navigation-list"><a href="contsctus.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-services-navigation-div">
+          <h4 class="footer-navigation-heading">Our Services</h4>
+          <ul class="footer-navigation-lists-ul">
+            <li class="footer-navigation-list"><a href="services1.html" class="service1-name">Mobile & Computer
+                Repair</a></li>
+            <li class="footer-navigation-list"><a href="services2.html" class="service2-name">Mobile & Computer
+                Repair</a></li>
+            <li class="footer-navigation-list"><a href="services3.html" class="service3-name">Mobile & Computer
+                Repair</a></li>
+            <li class="footer-navigation-list"><a href="services4.html" class="service4-name">Mobile & Computer
+                Repair</a></li>
+            <li class="footer-navigation-list"><a href="services5.html" class="service5-name">Mobile & Computer
+                Repair</a></li>
+            <li class="footer-navigation-list"><a href="services6.html" class="service6-name">Mobile & Computer
+                Repair</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-subcriber-div">
+        <h4 class="footer-subscriber-heading">Subscribe Our Newsletter</h4>
+        <form action="" class="footer-subscriber-form">
+          <input type="email" name="email" placeholder="Your Email" class="footer-subscriber-email-input">
+          <input type="submit" value="Subscribe" class="footer-subcriber-subscribe-button">
+        </form>
+        <p class="footer-subscriber-description">*Stay updated with the latest HR trends expert tips insights your
+          inbox.</p>
+      </div>
+    </section>
+    <section class="footer-section-3">
+      <h5 class="footer-copyright-heading">Copyright © 2025 All Rights Reserved.</h5>
+    </section>
+  </footer>
+
+    <script>
+      fetch('https://script.google.com/macros/s/AKfycbwI3XCwdSQ46bq6jOoB6g4shsQStOkLbg9B0jE1-LPg4McRHVfj2Od8nsp9sHlCVJot6A/exec')
+      .then(res => res.json())
+      .then(data => {
+        console.log("data :",data);
+        
+        document.getElementById("h-first-banner-first-line").innerHTML = data["h-first-banner-first-line"]
+        document.getElementById("h-first-banner-second-line").innerHTML = data["h-first-banner-second-line"]
+      })
+    </script>
+
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("navMenu");
+  const overlay = document.getElementById("overlay");
+  const closeBtn = document.getElementById("closeNavBtn");
+
+  function openMobileNav() {
+    if (window.innerWidth <= 860) {
+      navMenu.classList.add("active");
+      overlay.classList.add("show");
+      overlay.classList.remove("hidden");
+    }
+  }
+
+  function closeMobileNav() {
+    navMenu.classList.remove("active");
+    overlay.classList.remove("show");
+    overlay.classList.add("hidden");
+  }
+
+  hamburger.addEventListener("click", openMobileNav);
+  closeBtn.addEventListener("click", closeMobileNav);
+  overlay.addEventListener("click", closeMobileNav);
+</script>
+
+
+
+
+  <script>
+    const slides = document.querySelectorAll('.h-banner-div');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const slider = document.getElementById('hBannerSlider');
+
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+
+    // 🔁 Hide all slides
+    function hideAllSlides() {
+      slides.forEach(slide => {
+        slide.style.display = 'none';
+      });
+    }
+
+    // ✅ Show current slide
+    function showSlide(index) {
+      hideAllSlides();
+      slides[index].style.display = 'flex';
+    }
+
+    // 🚀 Init
+    showSlide(currentIndex);
+
+    // ⏱️ Autoplay
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      showSlide(currentIndex);
+    }, 4000);
+
+    // 👉 Next
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      showSlide(currentIndex);
+    });
+
+    // 👈 Prev
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      showSlide(currentIndex);
+    });
+
+    // 👉 Drag/Swipe Support
+    let startX = 0;
+    let endX = 0;
+
+    // Mouse
+    slider.addEventListener('mousedown', (e) => {
+      startX = e.clientX;
+    });
+
+    slider.addEventListener('mouseup', (e) => {
+      endX = e.clientX;
+      handleSwipe();
+    });
+
+    // Touch
+    slider.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+    });
+
+    slider.addEventListener('touchend', (e) => {
+      endX = e.changedTouches[0].clientX;
+      handleSwipe();
+    });
+
+    // 💡 Swipe Logic
+    function handleSwipe() {
+      const swipeDistance = endX - startX;
+      if (Math.abs(swipeDistance) > 50) {
+        if (swipeDistance < 0) {
+          // Swiped Left
+          currentIndex = (currentIndex + 1) % totalSlides;
+        } else {
+          // Swiped Right
+          currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        }
+        showSlide(currentIndex);
+      }
+    }
+  </script>
+
+
+
+  <script>
+    const cards = document.querySelectorAll('.testimonial-card');
+    const prevbtn = document.getElementById('prevButton');
+    const nextbtn = document.getElementById('nextButton');
+    const dotsContainer = document.getElementById('testimonialDots');
+
+    let currentindex = 0;
+    let total = cards.length;
+    let visibleCount = getVisibleCount();
+
+    function getVisibleCount() {
+      // 768px is the mobile breakpoint
+      return window.matchMedia("(max-width: 767px)").matches ? 1 : 2;
+    }
+
+    function updateSlider() {
+      visibleCount = getVisibleCount(); // re-check on resize
+      cards.forEach((card, i) => {
+        const order = (i - currentindex + total) % total;
+        card.style.order = order;
+
+        if (order < visibleCount) {
+          card.classList.add('show');
+        } else {
+          card.classList.remove('show');
+        }
+      });
+
+      updateDots();
+    }
+
+    function updateDots() {
+      dotsContainer.innerHTML = '';
+      for (let i = 0; i < total; i++) {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        if (i === currentindex) dot.classList.add('active');
+        dotsContainer.appendChild(dot);
+      }
+    }
+
+    nextbtn.addEventListener('click', () => {
+      currentindex = (currentindex + 1) % total;
+      updateSlider();
+    });
+
+    prevbtn.addEventListener('click', () => {
+      currentindex = (currentindex - 1 + total) % total;
+      updateSlider();
+    });
+
+    // Recalculate on window resize
+    window.addEventListener('resize', updateSlider);
+
+    updateSlider();
+  </script>
+</body>
+
+</html>
