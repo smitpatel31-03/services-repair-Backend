@@ -12,6 +12,10 @@
 
 <body>
 
+  <div id="loader" class="loader-wrapper">
+    <div class="loader"></div>
+  </div>
+  <div id="page-content" style="display: none;">
   <header class="header">
     <div id="overlay" class="overlay hidden"></div>
     <div class="header-container">
@@ -90,7 +94,7 @@
         <div class="h-aboutus-description-taglines1-card-div">
           <div class="h-aboutus-description-tagline1-card">
             <img src="" alt="">
-            <p  id="h-aboutus-description-tagline1-card-1">fast and reliable service</p>
+            <p id="h-aboutus-description-tagline1-card-1">fast and reliable service</p>
           </div>
           <div class="h-aboutus-description-tagline1-card">
             <img src="" alt="">
@@ -492,110 +496,121 @@
       <h5 class="footer-copyright-heading">Copyright © <a href="" class="year">2025</a>All Rights Reserved.</h5>
     </section>
   </footer>
+</body>
+</div>
 
-    <script>
-      fetch('https://script.google.com/macros/s/AKfycbw2ccaASiheu8WAOFpDZz05WNZhxvcdTO8MZBtdo7VvVTJupclgo33deEeFJoA1Vjbu/exec')
-      .then(res => res.json())
-      .then(data => {
-        console.log("data :",data);
-        let year = new Date()
-        const curruntYear = year.getFullYear()
+<script>
+  fetch('https://script.google.com/macros/s/AKfycbw2ccaASiheu8WAOFpDZz05WNZhxvcdTO8MZBtdo7VvVTJupclgo33deEeFJoA1Vjbu/exec')
+    .then(res => res.json())
+    .then(data => {
+      console.log("data :", data);
+      let year = new Date()
+      const curruntYear = year.getFullYear()
 
-        document.querySelectorAll(".logo").forEach(el => el.src = data["logo"])
-        document.querySelector(".header-button-link").textContent = data["header-button-link"]
+      document.querySelectorAll(".logo").forEach(el => el.src = data["logo"])
+      document.querySelector(".header-button-link").textContent = data["header-button-link"]
 
-        document.getElementById("footer-logo-description").textContent = data["footer-logo-description"]
-        document.querySelector(".c-address").textContent = data["address"]
-      
-        if(data["linkedin"] && data["linkedin"].trim() !== ""){
-          document.querySelector(".linkedin").style.display = "inline-flex"
-        }
-        if(data["X"] && data["X"].trim() !== ""){
-          document.querySelector(".X").style.display = "inline-flex"
-        }
-        if(data["youtube"] && data["youtube"].trim() !== ""){
-          document.querySelector(".youtube").style.display = "inline-flex"
-        }
+      document.getElementById("footer-logo-description").textContent = data["footer-logo-description"]
+      document.querySelector(".c-address").textContent = data["address"]
 
-        document.querySelector(".footer-subscriber-heading").textContent = data["footer-subscriber-heading"]
-        document.querySelector(".footer-subscriber-description").textContent = data["footer-subscriber-description"]
+      if (data["linkedin"] && data["linkedin"].trim() !== "") {
+        document.querySelector(".linkedin").style.display = "inline-flex"
+      }
+      if (data["X"] && data["X"].trim() !== "") {
+        document.querySelector(".X").style.display = "inline-flex"
+      }
+      if (data["youtube"] && data["youtube"].trim() !== "") {
+        document.querySelector(".youtube").style.display = "inline-flex"
+      }
 
-        document.querySelector(".year").textContent = curruntYear
-        
-                        document.querySelectorAll(".service1-name").forEach(el => el.textContent = data["service-name-1"])
-        document.querySelectorAll(".service2-name").forEach(el => el.textContent = data["service-name-2"])
-        document.querySelectorAll(".service3-name").forEach(el => el.textContent = data["service-name-3"])
-                document.querySelectorAll(".service4-name").forEach(el => el.textContent = data["service-name-4"])
-        document.querySelectorAll(".service5-name").forEach(el => el.textContent = data["service-name-5"])
-        document.querySelectorAll(".service6-name").forEach(el => el.textContent = data["service-name-6"])
-        document.getElementById("h-aboutus-photo-1").src = data["h-aboutus-photo-1"]
-        document.getElementById("h-aboutus-photo-2").src = data["h-aboutus-photo-2"]
-        document.getElementById("h-aboutus-photos-row1-exprience-card1-content-1").textContent = data["h-aboutus-photos-row1-exprience-card1-content-1"]
-        document.getElementById("h-aboutus-photos-row1-exprience-card1-content-2").textContent = data["h-aboutus-photos-row1-exprience-card1-content-2"]
-        document.getElementById("h-aboutus-photos-row1-exprience-card2-content-1").textContent = data["h-aboutus-photos-row1-exprience-card2-content-1"]
-        document.getElementById("h-about-us-heading"),textContent = data["h-about-us-heading"]
-        document.getElementById("h-about-us-discription"),textContent = data["h-about-us-discription"]
-        document.getElementById("h-aboutus-description-tagline1-card-1").textContent = data["h-aboutus-description-tagline1-card-1"]
-        document.getElementById("h-aboutus-description-tagline1-card-2").textContent = data["h-aboutus-description-tagline1-card-2"]
-        document.getElementById("h-aboutus-description-tagline2-1").textContent = data["h-aboutus-description-tagline2-1"]
-        document.getElementById("h-aboutus-description-tagline2-2").textContent = data["h-aboutus-description-tagline2-2"]
-        document.getElementById("h-aboutus-button").textContent = data["h-aboutus-button"]
+      document.querySelector(".footer-subscriber-heading").textContent = data["footer-subscriber-heading"]
+      document.querySelector(".footer-subscriber-description").textContent = data["footer-subscriber-description"]
 
-        document.getElementById("h-services-2-description-main-tagline-1").textContent = data["h-services-2-description-main-tagline-1"]
-        document.getElementById("h-services-2-description-heading-1").textContent = data["h-services-2-description-heading-1"]
-        document.getElementById("h-services-2-description-paragraph-1").textContent = data["h-services-2-description-paragraph-1"]
-        document.getElementById("h-why-choose-us-tagline-1-1").textContent = data["h-why-choose-us-tagline-1-1"]
-        document.getElementById("h-why-choose-us-tagline-1-2").textContent = data["h-why-choose-us-tagline-1-2"]
-        document.getElementById("h-services-2-image-1").src = data["h-services-2-image-1"]
-        document.getElementById("h-services-2-description-main-tagline-2").textContent = data["h-services-2-description-main-tagline-2"]
-        document.getElementById("h-services-2-description-heading-2").textContent = data["h-services-2-description-heading-2"]
-        document.getElementById("h-services-2-description-paragraph-2").textContent = data["h-services-2-description-paragraph-2"]
-        document.getElementById("h-why-choose-us-tagline-2-1").textContent = data["h-why-choose-us-tagline-2-1"]
-        document.getElementById("h-why-choose-us-tagline-2-2").textContent = data["h-why-choose-us-tagline-2-2"]
-        document.getElementById("h-services-2-image-2").src = data["h-services-2-image-2"]
+      document.querySelector(".year").textContent = curruntYear
 
-        document.getElementById("a-services-2-heading-tagline").textContent = data["a-services-2-heading-tagline"]
-        document.getElementById("a-services-2-heading").textContent = data["a-services-2-heading"]
-        document.getElementById("a-services-2-description").textContent = data["a-services-2-description"]
-        document.getElementById("a-services-2-image").src = data["a-services-2-image"]
-        document.getElementById("a-servces-2-card-tagline-1").textContent = data["a-servces-2-card-tagline-1"]
-        document.getElementById("a-servces-2-card-discription-1").textContent = data["a-servces-2-card-discription-1"]
-        document.getElementById("a-servces-2-card-tagline-2").textContent = data["a-servces-2-card-tagline-2"]
-        document.getElementById("a-servces-2-card-discription-2").textContent = data["a-servces-2-card-discription-2"]
-        document.getElementById("a-servces-2-card-tagline-3").textContent = data["a-servces-2-card-tagline-3"]
-        document.getElementById("a-servces-2-card-discription-3").textContent = data["a-servces-2-card-discription-3"]
+      document.querySelectorAll(".service1-name").forEach(el => el.textContent = data["service-name-1"])
+      document.querySelectorAll(".service2-name").forEach(el => el.textContent = data["service-name-2"])
+      document.querySelectorAll(".service3-name").forEach(el => el.textContent = data["service-name-3"])
+      document.querySelectorAll(".service4-name").forEach(el => el.textContent = data["service-name-4"])
+      document.querySelectorAll(".service5-name").forEach(el => el.textContent = data["service-name-5"])
+      document.querySelectorAll(".service6-name").forEach(el => el.textContent = data["service-name-6"])
+      document.getElementById("h-aboutus-photo-1").src = data["h-aboutus-photo-1"]
+      document.getElementById("h-aboutus-photo-2").src = data["h-aboutus-photo-2"]
+      document.getElementById("h-aboutus-photos-row1-exprience-card1-content-1").textContent = data["h-aboutus-photos-row1-exprience-card1-content-1"]
+      document.getElementById("h-aboutus-photos-row1-exprience-card1-content-2").textContent = data["h-aboutus-photos-row1-exprience-card1-content-2"]
+      document.getElementById("h-aboutus-photos-row1-exprience-card2-content-1").textContent = data["h-aboutus-photos-row1-exprience-card2-content-1"]
+      document.getElementById("h-about-us-heading"), textContent = data["h-about-us-heading"]
+      document.getElementById("h-about-us-discription"), textContent = data["h-about-us-discription"]
+      document.getElementById("h-aboutus-description-tagline1-card-1").textContent = data["h-aboutus-description-tagline1-card-1"]
+      document.getElementById("h-aboutus-description-tagline1-card-2").textContent = data["h-aboutus-description-tagline1-card-2"]
+      document.getElementById("h-aboutus-description-tagline2-1").textContent = data["h-aboutus-description-tagline2-1"]
+      document.getElementById("h-aboutus-description-tagline2-2").textContent = data["h-aboutus-description-tagline2-2"]
+      document.getElementById("h-aboutus-button").textContent = data["h-aboutus-button"]
 
-        document.getElementById("a-servives-3-image-1").src = data["a-servives-3-image-1"]
-        document.getElementById("a-servives-3-image-2").src = data["a-servives-3-image-2"]
-        document.getElementById("a-servives-3-image-3").src = data["a-servives-3-image-3"]
-        document.getElementById("a-services-3-description-tagline").textContent = data["a-services-3-description-tagline"]
-        document.getElementById("a-services-3-description-heading").textContent = data["a-services-3-description-heading"]
-        document.getElementById("a-services-3-description-description").textContent = data["a-services-3-description-description"]
-        document.getElementById("a-services-3-description-card-number-1").textContent = data["a-services-3-description-card-number-1"]
-        document.getElementById("a-services-3-description-card-content-1").textContent = data["a-services-3-description-card-content-1"]
-        document.getElementById("a-services-3-description-card-number-2").textContent = data["a-services-3-description-card-number-2"]
-        document.getElementById("a-services-3-description-card-content-2").textContent = data["a-services-3-description-card-content-2"]
-        document.getElementById("a-services-3-description-card-number-3").textContent = data["a-services-3-description-card-number-3"]
-        document.getElementById("a-services-3-description-card-content-3").textContent = data["a-services-3-description-card-content-3"]
-        document.getElementById("a-services-3-description-list-1").textContent = data["a-services-3-description-list-1"]
-        document.getElementById("a-services-3-description-list-2").textContent = data["a-services-3-description-list-2"]
+      document.getElementById("h-services-2-description-main-tagline-1").textContent = data["h-services-2-description-main-tagline-1"]
+      document.getElementById("h-services-2-description-heading-1").textContent = data["h-services-2-description-heading-1"]
+      document.getElementById("h-services-2-description-paragraph-1").textContent = data["h-services-2-description-paragraph-1"]
+      document.getElementById("h-why-choose-us-tagline-1-1").textContent = data["h-why-choose-us-tagline-1-1"]
+      document.getElementById("h-why-choose-us-tagline-1-2").textContent = data["h-why-choose-us-tagline-1-2"]
+      document.getElementById("h-services-2-image-1").src = data["h-services-2-image-1"]
+      document.getElementById("h-services-2-description-main-tagline-2").textContent = data["h-services-2-description-main-tagline-2"]
+      document.getElementById("h-services-2-description-heading-2").textContent = data["h-services-2-description-heading-2"]
+      document.getElementById("h-services-2-description-paragraph-2").textContent = data["h-services-2-description-paragraph-2"]
+      document.getElementById("h-why-choose-us-tagline-2-1").textContent = data["h-why-choose-us-tagline-2-1"]
+      document.getElementById("h-why-choose-us-tagline-2-2").textContent = data["h-why-choose-us-tagline-2-2"]
+      document.getElementById("h-services-2-image-2").src = data["h-services-2-image-2"]
 
-        document.getElementById("a-our-team-tagline").textContent = data["a-our-team-tagline"]
-        document.getElementById("a-our-team-heading").textContent = data["a-our-team-heading"]
-        document.getElementById("A-our-team-card-1").style.backgroundImage = `url('${data["A-our-team-card-image-1"]}')`
-        document.getElementById("a-our-team-name-1").textContent = data["a-our-team-name-1"]
-        document.getElementById("a-our-team-position-1").textContent = data["a-our-team-position-1"]
-        document.getElementById("A-our-team-card-2").style.backgroundImage = `url('${data["A-our-team-card-image-2"]}')`
-        document.getElementById("a-our-team-name-2").textContent = data["a-our-team-name-2"]
-        document.getElementById("a-our-team-position-2").textContent = data["a-our-team-position-2"]
-        document.getElementById("A-our-team-card-3").style.backgroundImage = `url('${data["A-our-team-card-image-3"]}')`
-        document.getElementById("a-our-team-name-3").textContent = data["a-our-team-name-3"]
-        document.getElementById("a-our-team-position-3").textContent = data["a-our-team-position-3"]
-        document.getElementById("A-our-team-card-4").style.backgroundImage = `url('${data["A-our-team-card-image-4"]}')`
-        document.getElementById("a-our-team-name-4").textContent = data["a-our-team-name-4"]
-        document.getElementById("a-our-team-position-4").textContent = data["a-our-team-position-4"]
-      })
-    </script>
+      document.getElementById("a-services-2-heading-tagline").textContent = data["a-services-2-heading-tagline"]
+      document.getElementById("a-services-2-heading").textContent = data["a-services-2-heading"]
+      document.getElementById("a-services-2-description").textContent = data["a-services-2-description"]
+      document.getElementById("a-services-2-image").src = data["a-services-2-image"]
+      document.getElementById("a-servces-2-card-tagline-1").textContent = data["a-servces-2-card-tagline-1"]
+      document.getElementById("a-servces-2-card-discription-1").textContent = data["a-servces-2-card-discription-1"]
+      document.getElementById("a-servces-2-card-tagline-2").textContent = data["a-servces-2-card-tagline-2"]
+      document.getElementById("a-servces-2-card-discription-2").textContent = data["a-servces-2-card-discription-2"]
+      document.getElementById("a-servces-2-card-tagline-3").textContent = data["a-servces-2-card-tagline-3"]
+      document.getElementById("a-servces-2-card-discription-3").textContent = data["a-servces-2-card-discription-3"]
+
+      document.getElementById("a-servives-3-image-1").src = data["a-servives-3-image-1"]
+      document.getElementById("a-servives-3-image-2").src = data["a-servives-3-image-2"]
+      document.getElementById("a-servives-3-image-3").src = data["a-servives-3-image-3"]
+      document.getElementById("a-services-3-description-tagline").textContent = data["a-services-3-description-tagline"]
+      document.getElementById("a-services-3-description-heading").textContent = data["a-services-3-description-heading"]
+      document.getElementById("a-services-3-description-description").textContent = data["a-services-3-description-description"]
+      document.getElementById("a-services-3-description-card-number-1").textContent = data["a-services-3-description-card-number-1"]
+      document.getElementById("a-services-3-description-card-content-1").textContent = data["a-services-3-description-card-content-1"]
+      document.getElementById("a-services-3-description-card-number-2").textContent = data["a-services-3-description-card-number-2"]
+      document.getElementById("a-services-3-description-card-content-2").textContent = data["a-services-3-description-card-content-2"]
+      document.getElementById("a-services-3-description-card-number-3").textContent = data["a-services-3-description-card-number-3"]
+      document.getElementById("a-services-3-description-card-content-3").textContent = data["a-services-3-description-card-content-3"]
+      document.getElementById("a-services-3-description-list-1").textContent = data["a-services-3-description-list-1"]
+      document.getElementById("a-services-3-description-list-2").textContent = data["a-services-3-description-list-2"]
+
+      document.getElementById("a-our-team-tagline").textContent = data["a-our-team-tagline"]
+      document.getElementById("a-our-team-heading").textContent = data["a-our-team-heading"]
+      document.getElementById("A-our-team-card-1").style.backgroundImage = `url('${data["A-our-team-card-image-1"]}')`
+      document.getElementById("a-our-team-name-1").textContent = data["a-our-team-name-1"]
+      document.getElementById("a-our-team-position-1").textContent = data["a-our-team-position-1"]
+      document.getElementById("A-our-team-card-2").style.backgroundImage = `url('${data["A-our-team-card-image-2"]}')`
+      document.getElementById("a-our-team-name-2").textContent = data["a-our-team-name-2"]
+      document.getElementById("a-our-team-position-2").textContent = data["a-our-team-position-2"]
+      document.getElementById("A-our-team-card-3").style.backgroundImage = `url('${data["A-our-team-card-image-3"]}')`
+      document.getElementById("a-our-team-name-3").textContent = data["a-our-team-name-3"]
+      document.getElementById("a-our-team-position-3").textContent = data["a-our-team-position-3"]
+      document.getElementById("A-our-team-card-4").style.backgroundImage = `url('${data["A-our-team-card-image-4"]}')`
+      document.getElementById("a-our-team-name-4").textContent = data["a-our-team-name-4"]
+      document.getElementById("a-our-team-position-4").textContent = data["a-our-team-position-4"]
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("page-content").style.display = "block";
+    })
+    .catch(err => {
+      console.error("Error loading data:", err);
+      alert("Failed to load site data. Please refresh.");
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("page-content").style.display = "block";
+    });
+</script>
+</script>
 
 <script>
   const hamburger = document.getElementById("hamburger");

@@ -11,6 +11,11 @@
 </head>
 
 <body>
+    <div id="loader" class="loader-wrapper">
+    <div class="loader"></div>
+  </div>
+  
+   <div id="page-content" style="display: none">
   <header class="header">
     <div id="overlay" class="overlay hidden"></div>
     <div class="header-container">
@@ -462,6 +467,7 @@
       <h5 class="footer-copyright-heading">Copyright © <a href="" class="year">2025</a>All Rights Reserved.</h5>
     </section>
   </footer>
+</div>
 
     <script>
     fetch("https://script.google.com/macros/s/AKfycbw2ccaASiheu8WAOFpDZz05WNZhxvcdTO8MZBtdo7VvVTJupclgo33deEeFJoA1Vjbu/exec")
@@ -540,8 +546,16 @@
         document.getElementById("services-section-4-card-description-3-3").textContent = data["services-section-4-card-description-3-3"]
         document.getElementById("services-section-4-card-number-3-4").textContent = data["services-section-4-card-number-3-4"]
         document.getElementById("services-section-4-card-description-3-4").textContent = data["services-section-4-card-description-3-4"]
-
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("page-content").style.display = "block";
       })
+      .catch(err => {
+        console.error("Error loading data:", err);
+        alert("Failed to load site data. Please refresh.");
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("page-content").style.display = "block";
+      });
+  </script>
   </script>
 
 <script>

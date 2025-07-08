@@ -11,6 +11,10 @@
 </head>
 
 <body>
+  <div id="loader" class="loader-wrapper">
+    <div class="loader"></div>
+  </div>
+  <div id="page-content" style="display: none;">
   <header class="header">
     <div id="overlay" class="overlay hidden"></div>
     <div class="header-container">
@@ -135,7 +139,7 @@
         <div class="h-aboutus-description-taglines1-card-div">
           <div class="h-aboutus-description-tagline1-card">
             <img src="" alt="">
-            <p  id="h-aboutus-description-tagline1-card-1">fast and reliable service</p>
+            <p id="h-aboutus-description-tagline1-card-1">fast and reliable service</p>
           </div>
           <div class="h-aboutus-description-tagline1-card">
             <img src="" alt="">
@@ -658,12 +662,17 @@
     </section>
   </footer>
 
-    <script>
-      fetch('https://script.google.com/macros/s/AKfycbw2ccaASiheu8WAOFpDZz05WNZhxvcdTO8MZBtdo7VvVTJupclgo33deEeFJoA1Vjbu/exec')
+  </div>
+
+  <script>
+    document.getElementById("page-content").style.display = "none";
+    document.getElementById("loader").style.display = "flex";
+
+    fetch('https://script.google.com/macros/s/AKfycbw2ccaASiheu8WAOFpDZz05WNZhxvcdTO8MZBtdo7VvVTJupclgo33deEeFJoA1Vjbu/exec')
       .then(res => res.json())
       .then(data => {
-        console.log("data :",data);
-        
+        console.log("data :", data);
+
         let year = new Date()
         const curruntYear = year.getFullYear()
 
@@ -672,14 +681,14 @@
 
         document.getElementById("footer-logo-description").textContent = data["footer-logo-description"]
         document.querySelector(".c-address").textContent = data["address"]
-      
-        if(data["linkedin"] && data["linkedin"].trim() !== ""){
+
+        if (data["linkedin"] && data["linkedin"].trim() !== "") {
           document.querySelector(".linkedin").style.display = "inline-flex"
         }
-        if(data["X"] && data["X"].trim() !== ""){
+        if (data["X"] && data["X"].trim() !== "") {
           document.querySelector(".X").style.display = "inline-flex"
         }
-        if(data["youtube"] && data["youtube"].trim() !== ""){
+        if (data["youtube"] && data["youtube"].trim() !== "") {
           document.querySelector(".youtube").style.display = "inline-flex"
         }
 
@@ -687,15 +696,15 @@
         document.querySelector(".footer-subscriber-description").textContent = data["footer-subscriber-description"]
 
         document.querySelector(".year").textContent = curruntYear
-        
+
 
         document.querySelector(".h-banner-1").style.backgroundImage = `url('${data["h-banner-background-image-1"]}')`;
         document.querySelector(".h-banner-2").style.backgroundImage = `url('${data["h-banner-background-image-2"]}')`;
-      
+
         document.getElementById("h-first-banner-first-line").textContent = data["h-first-banner-first-line"]
         document.getElementById("h-second-banner-first-line").textContent = data["h-second-banner-first-line"]
-        document.getElementById("h-first-banner-heading").textContent = data["h-first-banner-heading"] 
-        document.getElementById("h-second-banner-heading").textContent = data["h-second-banner-heading"] 
+        document.getElementById("h-first-banner-heading").textContent = data["h-first-banner-heading"]
+        document.getElementById("h-second-banner-heading").textContent = data["h-second-banner-heading"]
         document.getElementById('h-first-banner-second-line').textContent = data["h-first-banner-second-line"]
         document.getElementById('h-second-banner-second-line').textContent = data["h-second-banner-second-line"]
         document.getElementById("h-first-banner-button-1").textContent = data["h-first-banner-button-1"]
@@ -710,8 +719,8 @@
         document.getElementById("h-aboutus-photos-row1-exprience-card1-content-1").textContent = data["h-aboutus-photos-row1-exprience-card1-content-1"]
         document.getElementById("h-aboutus-photos-row1-exprience-card1-content-2").textContent = data["h-aboutus-photos-row1-exprience-card1-content-2"]
         document.getElementById("h-aboutus-photos-row1-exprience-card2-content-1").textContent = data["h-aboutus-photos-row1-exprience-card2-content-1"]
-        document.getElementById("h-about-us-heading"),textContent = data["h-about-us-heading"]
-        document.getElementById("h-about-us-discription"),textContent = data["h-about-us-discription"]
+        document.getElementById("h-about-us-heading"), textContent = data["h-about-us-heading"]
+        document.getElementById("h-about-us-discription"), textContent = data["h-about-us-discription"]
         document.getElementById("h-aboutus-description-tagline1-card-1").textContent = data["h-aboutus-description-tagline1-card-1"]
         document.getElementById("h-aboutus-description-tagline1-card-2").textContent = data["h-aboutus-description-tagline1-card-2"]
         document.getElementById("h-aboutus-description-tagline2-1").textContent = data["h-aboutus-description-tagline2-1"]
@@ -783,51 +792,58 @@
         document.getElementById("testimonial-image-1").src = data["testimonial-image-1"]
         document.getElementById("testimonial-client-name-1").textContent = data["testimonial-client-name-1"]
         document.getElementById("testimonial-client-position-1").textContent = data["testimonial-client-position-1"]
-        document.getElementById("testimonial-client-review-1").textContent =  data["testimonial-client-review-1"]
-        document.getElementById("testimoial-review-description-1").textContent =  data["testimoial-review-description-1"]
+        document.getElementById("testimonial-client-review-1").textContent = data["testimonial-client-review-1"]
+        document.getElementById("testimoial-review-description-1").textContent = data["testimoial-review-description-1"]
         document.getElementById("testimonial-image-2").src = data["testimonial-image-2"]
         document.getElementById("testimonial-client-name-2").textContent = data["testimonial-client-name-2"]
         document.getElementById("testimonial-client-position-2").textContent = data["testimonial-client-position-2"]
-        document.getElementById("testimonial-client-review-2").textContent =  data["testimonial-client-review-2"]
-        document.getElementById("testimoial-review-description-2").textContent =  data["testimoial-review-description-2"]
+        document.getElementById("testimonial-client-review-2").textContent = data["testimonial-client-review-2"]
+        document.getElementById("testimoial-review-description-2").textContent = data["testimoial-review-description-2"]
         document.getElementById("testimonial-image-3").src = data["testimonial-image-3"]
         document.getElementById("testimonial-client-name-3").textContent = data["testimonial-client-name-3"]
         document.getElementById("testimonial-client-position-3").textContent = data["testimonial-client-position-3"]
-        document.getElementById("testimonial-client-review-3").textContent =  data["testimonial-client-review-3"]
-        document.getElementById("testimoial-review-description-3").textContent =  data["testimoial-review-description-3"]
+        document.getElementById("testimonial-client-review-3").textContent = data["testimonial-client-review-3"]
+        document.getElementById("testimoial-review-description-3").textContent = data["testimoial-review-description-3"]
         document.getElementById("testimonial-image-4").src = data["testimonial-image-3"]
         document.getElementById("testimonial-client-name-4").textContent = data["testimonial-client-name-4"]
         document.getElementById("testimonial-client-position-4").textContent = data["testimonial-client-position-4"]
-        document.getElementById("testimonial-client-review-4").textContent =  data["testimonial-client-review-4"]
-        document.getElementById("testimoial-review-description-4").textContent =  data["testimoial-review-description-4"]
-
+        document.getElementById("testimonial-client-review-4").textContent = data["testimonial-client-review-4"]
+        document.getElementById("testimoial-review-description-4").textContent = data["testimoial-review-description-4"]
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("page-content").style.display = "block";
       })
-    </script>
+      .catch(err => {
+        console.error("Error loading data:", err);
+        alert("Failed to load site data. Please refresh.");
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("page-content").style.display = "block";
+      });
+  </script>
 
-<script>
-  const hamburger = document.getElementById("hamburger");
-  const navMenu = document.getElementById("navMenu");
-  const overlay = document.getElementById("overlay");
-  const closeBtn = document.getElementById("closeNavBtn");
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("navMenu");
+    const overlay = document.getElementById("overlay");
+    const closeBtn = document.getElementById("closeNavBtn");
 
-  function openMobileNav() {
-    if (window.innerWidth <= 860) {
-      navMenu.classList.add("active");
-      overlay.classList.add("show");
-      overlay.classList.remove("hidden");
+    function openMobileNav() {
+      if (window.innerWidth <= 860) {
+        navMenu.classList.add("active");
+        overlay.classList.add("show");
+        overlay.classList.remove("hidden");
+      }
     }
-  }
 
-  function closeMobileNav() {
-    navMenu.classList.remove("active");
-    overlay.classList.remove("show");
-    overlay.classList.add("hidden");
-  }
+    function closeMobileNav() {
+      navMenu.classList.remove("active");
+      overlay.classList.remove("show");
+      overlay.classList.add("hidden");
+    }
 
-  hamburger.addEventListener("click", openMobileNav);
-  closeBtn.addEventListener("click", closeMobileNav);
-  overlay.addEventListener("click", closeMobileNav);
-</script>
+    hamburger.addEventListener("click", openMobileNav);
+    closeBtn.addEventListener("click", closeMobileNav);
+    overlay.addEventListener("click", closeMobileNav);
+  </script>
 
 
 
